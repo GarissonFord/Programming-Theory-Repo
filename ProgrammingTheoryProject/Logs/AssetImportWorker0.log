@@ -15,11 +15,11 @@ C:/Users/Gary/Documents/GitHub/Programming-Theory-Repo/ProgrammingTheoryProject
 -logFile
 Logs/AssetImportWorker0.log
 -srvPort
-50079
+50256
 Successfully changed project path to: C:/Users/Gary/Documents/GitHub/Programming-Theory-Repo/ProgrammingTheoryProject
 C:/Users/Gary/Documents/GitHub/Programming-Theory-Repo/ProgrammingTheoryProject
 Using Asset Import Pipeline V2.
-Refreshing native plugins compatible for Editor in 63.33 ms, found 1 plugins.
+Refreshing native plugins compatible for Editor in 78.98 ms, found 1 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Initialize engine version: 2020.3.7f1 (dd97f2c94397)
 [Subsystems] Discovering subsystems at path C:/Program Files/Unity/Hub/Editor/2020.3.7f1/Editor/Data/Resources/UnitySubsystems
@@ -35,143 +35,1782 @@ Initialize mono
 Mono path[0] = 'C:/Program Files/Unity/Hub/Editor/2020.3.7f1/Editor/Data/Managed'
 Mono path[1] = 'C:/Program Files/Unity/Hub/Editor/2020.3.7f1/Editor/Data/MonoBleedingEdge/lib/mono/unityjit'
 Mono config path = 'C:/Program Files/Unity/Hub/Editor/2020.3.7f1/Editor/Data/MonoBleedingEdge/etc'
-Using monoOptions --debugger-agent=transport=dt_socket,embedding=1,server=y,suspend=n,address=127.0.0.1:56456
+Using monoOptions --debugger-agent=transport=dt_socket,embedding=1,server=y,suspend=n,address=127.0.0.1:56808
 Begin MonoManager ReloadAssembly
 Registering precompiled unity dll's ...
 Register platform support module: C:/Program Files/Unity/Hub/Editor/2020.3.7f1/Editor/Data/PlaybackEngines/WindowsStandaloneSupport/UnityEditor.WindowsStandalone.Extensions.dll
-Registered in 0.007639 seconds.
+Registered in 0.004436 seconds.
 Native extension for WindowsStandalone target not found
-Refreshing native plugins compatible for Editor in 87.63 ms, found 1 plugins.
+Refreshing native plugins compatible for Editor in 66.11 ms, found 1 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Mono: successfully reloaded assembly
-- Completed reload, in  2.542 seconds
+- Completed reload, in  2.054 seconds
 Platform modules already initialized, skipping
 Registering precompiled user dll's ...
-Registered in 0.003119 seconds.
+Registered in 0.001411 seconds.
 Begin MonoManager ReloadAssembly
 Native extension for WindowsStandalone target not found
-Refreshing native plugins compatible for Editor in 134.99 ms, found 1 plugins.
+Refreshing native plugins compatible for Editor in 97.81 ms, found 1 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Mono: successfully reloaded assembly
-- Completed reload, in  2.001 seconds
+- Completed reload, in  2.301 seconds
 Platform modules already initialized, skipping
 ========================================================================
 Worker process is ready to serve import requests
-Launched and connected shader compiler UnityShaderCompiler.exe after 0.08 seconds
-Refreshing native plugins compatible for Editor in 0.59 ms, found 1 plugins.
+Launched and connected shader compiler UnityShaderCompiler.exe after 0.13 seconds
+Refreshing native plugins compatible for Editor in 0.92 ms, found 1 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
-Unloading 1808 Unused Serialized files (Serialized files now loaded: 0)
-System memory in use before: 85.4 MB.
-System memory in use after: 85.4 MB.
+Unloading 1809 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 85.7 MB.
+System memory in use after: 85.6 MB.
 
-Unloading 24 unused Assets to reduce memory usage. Loaded Objects now: 2250.
-Total: 4.003700 ms (FindLiveObjects: 0.299500 ms CreateObjectMapping: 0.126000 ms MarkObjects: 3.386900 ms  DeleteObjects: 0.188900 ms)
-
-========================================================================
-Received Import Request.
-  path: Assets/Scenes
-  artifactKey: Guid(12b5e1a5593cdd446a8c4bc3dd20aaed) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Scenes using Guid(12b5e1a5593cdd446a8c4bc3dd20aaed) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '550ad72a3d63a1b82ac8c4cd3169acf6') in 0.026046 seconds
-  Import took 0.034330 seconds .
+Unloading 24 unused Assets to reduce memory usage. Loaded Objects now: 2252.
+Total: 4.188500 ms (FindLiveObjects: 0.361200 ms CreateObjectMapping: 0.156800 ms MarkObjects: 3.420200 ms  DeleteObjects: 0.247200 ms)
 
 ========================================================================
 Received Import Request.
-  Time since last request: 0.750710 seconds.
-  path: Assets/Scenes/TitleScreen.unity
-  artifactKey: Guid(44ba9f70755bd52408d23317d3c8c3e8) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Scenes/TitleScreen.unity using Guid(44ba9f70755bd52408d23317d3c8c3e8) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '4a0e97ab980cb08999289f31b34a1fd4') in 0.032402 seconds
-  Import took 0.039998 seconds .
+  path: Assets/Scenes/PlayerTest.unity
+  artifactKey: Guid(1c0a8e736be0bfc438c4e1754eef8487) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scenes/PlayerTest.unity using Guid(1c0a8e736be0bfc438c4e1754eef8487) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'f655c6a974b9c783d57a452d1bba81b3') in 0.034350 seconds
+  Import took 0.043064 seconds .
 
 ========================================================================
 Received Import Request.
-  Time since last request: 185.145106 seconds.
-  path: Assets
-  artifactKey: Guid(00000000000000001000000000000000) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets using Guid(00000000000000001000000000000000) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '5f6a1853b736837ecfb0820a881449cb') in 0.045690 seconds
-  Import took 0.057381 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 4.419922 seconds.
+  Time since last request: 344.716826 seconds.
   path: Assets/Scripts
   artifactKey: Guid(5c459830bee47ec40a4f809f9ecfe689) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Scripts using Guid(5c459830bee47ec40a4f809f9ecfe689) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'c6d3d8e08beeccf59d7ad4d5cd1911da') in 0.020183 seconds
-  Import took 0.025654 seconds .
+Start importing Assets/Scripts using Guid(5c459830bee47ec40a4f809f9ecfe689) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'ec7909e32f69a72b8fb648afec09450e') in 0.030853 seconds
+  Import took 0.041786 seconds .
 
 ========================================================================
 Received Import Request.
-  Time since last request: 11.275212 seconds.
-  path: Assets/Scripts/TitleScreenUIHandler.cs
-  artifactKey: Guid(bedc80e936111174088dd774d782dafe) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Scripts/TitleScreenUIHandler.cs using Guid(bedc80e936111174088dd774d782dafe) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '858baf03a9aa6fa8659f5e546bbeb961') in 0.086628 seconds
-  Import took 0.092801 seconds .
+  Time since last request: 8.384414 seconds.
+  path: Assets/Scripts/Player.cs
+  artifactKey: Guid(6520e75db7cdadc489b3d285c7f2ebaa) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scripts/Player.cs using Guid(6520e75db7cdadc489b3d285c7f2ebaa) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'f5b48f6a5d9614b50498a49f19323879') in 0.066080 seconds
+  Import took 0.072730 seconds .
 
 ========================================================================
 Received Prepare
 Registering precompiled user dll's ...
-Registered in 0.001592 seconds.
+Registered in 0.001648 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for WindowsStandalone target not found
+Refreshing native plugins compatible for Editor in 0.79 ms, found 1 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Mono: successfully reloaded assembly
+- Completed reload, in  2.345 seconds
+Platform modules already initialized, skipping
+Refreshing native plugins compatible for Editor in 0.73 ms, found 1 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 1805 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 85.6 MB.
+System memory in use after: 85.6 MB.
+
+Unloading 12 unused Assets to reduce memory usage. Loaded Objects now: 2257.
+Total: 5.261300 ms (FindLiveObjects: 0.376200 ms CreateObjectMapping: 0.153900 ms MarkObjects: 4.515600 ms  DeleteObjects: 0.212700 ms)
+
+========================================================================
+Received Import Request.
+  Time since last request: 38.720869 seconds.
+  path: Assets/GothicVania Church/Sprites
+  artifactKey: Guid(da08416cc812547178a26bc586017b5b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/GothicVania Church/Sprites using Guid(da08416cc812547178a26bc586017b5b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '506a482171583083a0ddfaa1953f3d99') in 0.019315 seconds
+  Import took 0.023120 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.942311 seconds.
+  path: Assets/GothicVania Church/Sprites/Player
+  artifactKey: Guid(5ea45a4fb406943cb9d94e5dd3a3a496) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/GothicVania Church/Sprites/Player using Guid(5ea45a4fb406943cb9d94e5dd3a3a496) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '48696b20afabee3d99c37748189a2b7c') in 0.011266 seconds
+  Import took 0.019342 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.043531 seconds.
+  path: Assets/GothicVania Church/Sprites/Player/crouch-kick1.png
+  artifactKey: Guid(e9b41e0420455410cbc248c9521394e0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/GothicVania Church/Sprites/Player/crouch-kick1.png using Guid(e9b41e0420455410cbc248c9521394e0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'd5005308fa5a366ea76b481a514cc30b') in 0.268190 seconds
+  Import took 0.275402 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000389 seconds.
+  path: Assets/GothicVania Church/Sprites/Player/idle4.png
+  artifactKey: Guid(563556f49d526459caa611ebd16ba049) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/GothicVania Church/Sprites/Player/idle4.png using Guid(563556f49d526459caa611ebd16ba049) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '9681097c7b79a913182143f088e4cd0d') in 0.023347 seconds
+  Import took 0.029166 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000274 seconds.
+  path: Assets/GothicVania Church/Sprites/Player/flying-kick1.png
+  artifactKey: Guid(aa2239ea2d85b4985b011ff36565aedb) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/GothicVania Church/Sprites/Player/flying-kick1.png using Guid(aa2239ea2d85b4985b011ff36565aedb) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'f3f7124ccb4c6483e8cfa75e9673c0c2') in 0.036952 seconds
+  Import took 0.043171 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000698 seconds.
+  path: Assets/GothicVania Church/Sprites/Player/walk3.png
+  artifactKey: Guid(79c2c726d52814a1c80e5bb3a4627fd3) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/GothicVania Church/Sprites/Player/walk3.png using Guid(79c2c726d52814a1c80e5bb3a4627fd3) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '5872ef6a37a5dc8ebe9ecb1c2d769da1') in 0.038060 seconds
+  Import took 0.044802 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000229 seconds.
+  path: Assets/GothicVania Church/Sprites/Player/fall2.png
+  artifactKey: Guid(17e914b2075b74d86afa9a2db24bede8) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/GothicVania Church/Sprites/Player/fall2.png using Guid(17e914b2075b74d86afa9a2db24bede8) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'fb3cc219238943ad3cdca998956bb779') in 0.040417 seconds
+  Import took 0.044292 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000452 seconds.
+  path: Assets/GothicVania Church/Sprites/Player/crouch1.png
+  artifactKey: Guid(6c12ab0f9f7e045279baad6e5fe695a4) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/GothicVania Church/Sprites/Player/crouch1.png using Guid(6c12ab0f9f7e045279baad6e5fe695a4) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '82c6c88861785b60782a9a6f443846dd') in 0.037705 seconds
+  Import took 0.046332 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000464 seconds.
+  path: Assets/GothicVania Church/Sprites/Player/punch2.png
+  artifactKey: Guid(2b7a26e786ce647949fe93bc248c77ea) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/GothicVania Church/Sprites/Player/punch2.png using Guid(2b7a26e786ce647949fe93bc248c77ea) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '021f3d8d7377dd78be59a491162cea1b') in 0.042012 seconds
+  Import took 0.047602 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000263 seconds.
+  path: Assets/GothicVania Church/Sprites/Player/crouch-kick4.png
+  artifactKey: Guid(4118dc37bb9534c589a2424dc034ae21) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/GothicVania Church/Sprites/Player/crouch-kick4.png using Guid(4118dc37bb9534c589a2424dc034ae21) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '2ff5f021d5bfce7a0b34aecb6e8f9811') in 0.031480 seconds
+  Import took 0.036638 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000187 seconds.
+  path: Assets/GothicVania Church/Sprites/Player/fall1.png
+  artifactKey: Guid(0a4d0cae07b8f459cbca8363c501cbfb) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/GothicVania Church/Sprites/Player/fall1.png using Guid(0a4d0cae07b8f459cbca8363c501cbfb) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'f370cdeeb2765b0ba3f91ae5cfd9bc36') in 0.035611 seconds
+  Import took 0.043796 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000584 seconds.
+  path: Assets/GothicVania Church/Sprites/Player/idle3.png
+  artifactKey: Guid(f9c37e6f72a5d4187af8f85c69a03557) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/GothicVania Church/Sprites/Player/idle3.png using Guid(f9c37e6f72a5d4187af8f85c69a03557) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '05085fdb7e4686f1d7032a99f6ca9ae9') in 0.038734 seconds
+  Import took 0.045253 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000281 seconds.
+  path: Assets/GothicVania Church/Sprites/Player/crouch-kick3.png
+  artifactKey: Guid(db31431b232124424a04b9deceaffd2e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/GothicVania Church/Sprites/Player/crouch-kick3.png using Guid(db31431b232124424a04b9deceaffd2e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '02ff7d838794685ccaf8b55c0a2480c6') in 0.033595 seconds
+  Import took 0.040737 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000238 seconds.
+  path: Assets/GothicVania Church/Sprites/Player/jump1.png
+  artifactKey: Guid(5c862507d62d14de4b3b26ea2191100f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/GothicVania Church/Sprites/Player/jump1.png using Guid(5c862507d62d14de4b3b26ea2191100f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '0a4601a888e8a50d2287b067fc708749') in 0.026012 seconds
+  Import took 0.036631 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000350 seconds.
+  path: Assets/GothicVania Church/Sprites/Player/hurt2.png
+  artifactKey: Guid(c83d22e2696f0452ca051dfbee91c509) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/GothicVania Church/Sprites/Player/hurt2.png using Guid(c83d22e2696f0452ca051dfbee91c509) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'b383b2c19d79a1fa27800d65c910a753') in 0.035659 seconds
+  Import took 0.039694 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000835 seconds.
+  path: Assets/GothicVania Church/Sprites/Player/kick5.png
+  artifactKey: Guid(13e9ff82fb53f43fa9e7d9940ad8ac71) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/GothicVania Church/Sprites/Player/kick5.png using Guid(13e9ff82fb53f43fa9e7d9940ad8ac71) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '2a33fc2365919a10147fd3744bb3cde0') in 0.027243 seconds
+  Import took 0.032775 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000282 seconds.
+  path: Assets/GothicVania Church/Sprites/Player/walk1.png
+  artifactKey: Guid(dd247f222c6264ca39475b75487a73f5) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/GothicVania Church/Sprites/Player/walk1.png using Guid(dd247f222c6264ca39475b75487a73f5) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '206e4b79ec61cdafa31a8f99f71a2b1b') in 0.027145 seconds
+  Import took 0.031290 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000437 seconds.
+  path: Assets/GothicVania Church/Sprites/Player/punch4.png
+  artifactKey: Guid(aab807ebc17334cb29e119f602ccf1b0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/GothicVania Church/Sprites/Player/punch4.png using Guid(aab807ebc17334cb29e119f602ccf1b0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'ed85a0861fc3098afb67a896e8a4b699') in 0.025477 seconds
+  Import took 0.030704 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000268 seconds.
+  path: Assets/GothicVania Church/Sprites/Player/idle1.png
+  artifactKey: Guid(fdb550509659347d4b4c37d05c566ad2) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/GothicVania Church/Sprites/Player/idle1.png using Guid(fdb550509659347d4b4c37d05c566ad2) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '224f9a21f29507d663b943126faf0202') in 0.027025 seconds
+  Import took 0.033765 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000277 seconds.
+  path: Assets/GothicVania Church/Sprites/Player/punch5.png
+  artifactKey: Guid(00f02830bc19842adbcc4fcde20eb341) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/GothicVania Church/Sprites/Player/punch5.png using Guid(00f02830bc19842adbcc4fcde20eb341) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'e37a4d6a4efae29a108bdc6274343864') in 0.027250 seconds
+  Import took 0.031232 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000335 seconds.
+  path: Assets/GothicVania Church/Sprites/Player/jump2.png
+  artifactKey: Guid(ca16ace20bd0a4e8fb0eb791a94a52d2) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/GothicVania Church/Sprites/Player/jump2.png using Guid(ca16ace20bd0a4e8fb0eb791a94a52d2) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '49609c4473950b0c1c9e819e792c46eb') in 0.026626 seconds
+  Import took 0.033118 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000540 seconds.
+  path: Assets/GothicVania Church/Sprites/Player/walk2.png
+  artifactKey: Guid(2298eed038e8b4a3089b59aae0afbbe7) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/GothicVania Church/Sprites/Player/walk2.png using Guid(2298eed038e8b4a3089b59aae0afbbe7) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '4d51c8640e4664259ae8afaac4e274fc') in 0.028141 seconds
+  Import took 0.035081 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000304 seconds.
+  path: Assets/GothicVania Church/Sprites/Player/walk6.png
+  artifactKey: Guid(6d15c03edf63546959ebef5c555dc1b2) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/GothicVania Church/Sprites/Player/walk6.png using Guid(6d15c03edf63546959ebef5c555dc1b2) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'edcbdd9ea271a089437a4d0a2223562a') in 0.028592 seconds
+  Import took 0.032877 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000512 seconds.
+  path: Assets/GothicVania Church/Sprites/Player/crouch-kick5.png
+  artifactKey: Guid(a2debfac0934c41acaa22fdbb78c2948) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/GothicVania Church/Sprites/Player/crouch-kick5.png using Guid(a2debfac0934c41acaa22fdbb78c2948) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '527cb8f268e972aefff32dbedb59048c') in 0.028405 seconds
+  Import took 0.034378 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000420 seconds.
+  path: Assets/GothicVania Church/Sprites/Player/walk4.png
+  artifactKey: Guid(afbdf7087d4a245c4b7e071b61787f94) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/GothicVania Church/Sprites/Player/walk4.png using Guid(afbdf7087d4a245c4b7e071b61787f94) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '8ac6c779c3a43acdb722c01e520129ae') in 0.023861 seconds
+  Import took 0.028807 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000284 seconds.
+  path: Assets/GothicVania Church/Sprites/Player/crouch2.png
+  artifactKey: Guid(c335d4c1b5ba44c11b0b64dc7564f844) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/GothicVania Church/Sprites/Player/crouch2.png using Guid(c335d4c1b5ba44c11b0b64dc7564f844) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '417a35b53a1985c8ccdb25ce675da535') in 0.023228 seconds
+  Import took 0.030062 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000521 seconds.
+  path: Assets/GothicVania Church/Sprites/Player/hurt1.png
+  artifactKey: Guid(c34d8f018a379485899213a80ea48319) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/GothicVania Church/Sprites/Player/hurt1.png using Guid(c34d8f018a379485899213a80ea48319) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '7eb3b935fb01baaa9ad4486c1e420560') in 0.025026 seconds
+  Import took 0.029863 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000397 seconds.
+  path: Assets/GothicVania Church/Sprites/Player/punch3.png
+  artifactKey: Guid(978f3b887382f4ea7bb4a05ccae8d671) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/GothicVania Church/Sprites/Player/punch3.png using Guid(978f3b887382f4ea7bb4a05ccae8d671) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'd666703dd098b1ea7fca58ab6304564b') in 0.025788 seconds
+  Import took 0.032570 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000427 seconds.
+  path: Assets/GothicVania Church/Sprites/Player/crouch-kick2.png
+  artifactKey: Guid(5588a1d29d5ee4a0abd8709439dd6bf1) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/GothicVania Church/Sprites/Player/crouch-kick2.png using Guid(5588a1d29d5ee4a0abd8709439dd6bf1) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '62a6cb5ea8f1f28fd6ce708982028b20') in 0.029369 seconds
+  Import took 0.037486 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000699 seconds.
+  path: Assets/GothicVania Church/Sprites/Player/kick1.png
+  artifactKey: Guid(9647dcba19d63446aa5f8289b90d9d0d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/GothicVania Church/Sprites/Player/kick1.png using Guid(9647dcba19d63446aa5f8289b90d9d0d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '275f931d8d3211f7d09a307e05e30da7') in 0.034231 seconds
+  Import took 0.039569 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000872 seconds.
+  path: Assets/GothicVania Church/Sprites/Player/punch6.png
+  artifactKey: Guid(45d6ae8e156324f6dabb024742201060) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/GothicVania Church/Sprites/Player/punch6.png using Guid(45d6ae8e156324f6dabb024742201060) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'd5f8473c8a4bd9e61ed143d3ac50ebb1') in 0.036885 seconds
+  Import took 0.044486 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000301 seconds.
+  path: Assets/GothicVania Church/Sprites/Player/idle2.png
+  artifactKey: Guid(644d0c456f11e4f3a8bfed6bd6c62e5e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/GothicVania Church/Sprites/Player/idle2.png using Guid(644d0c456f11e4f3a8bfed6bd6c62e5e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '346132d9284af5d45bceb2cdb74bd311') in 0.041560 seconds
+  Import took 0.047633 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000308 seconds.
+  path: Assets/GothicVania Church/Sprites/Player/kick4.png
+  artifactKey: Guid(e782e4bf9def54d40b3969040345bad0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/GothicVania Church/Sprites/Player/kick4.png using Guid(e782e4bf9def54d40b3969040345bad0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'c719ff44d4d222d8b01ce7f9484f12d9') in 0.024452 seconds
+  Import took 0.031149 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000295 seconds.
+  path: Assets/GothicVania Church/Sprites/Player/kick2.png
+  artifactKey: Guid(4d598155a80214f94afdb6008f1f3d66) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/GothicVania Church/Sprites/Player/kick2.png using Guid(4d598155a80214f94afdb6008f1f3d66) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '86ce21d81eb8cc46f6f08b8450894f7e') in 0.034283 seconds
+  Import took 0.039175 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000072 seconds.
+  path: Assets/GothicVania Church/Sprites/Player/walk5.png
+  artifactKey: Guid(ca4dc75c4cca84658b20e61c406cc5b5) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/GothicVania Church/Sprites/Player/walk5.png using Guid(ca4dc75c4cca84658b20e61c406cc5b5) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'bd75e28da1d447078d6107c7396e0d6f') in 0.038621 seconds
+  Import took 0.043762 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000284 seconds.
+  path: Assets/GothicVania Church/Sprites/Player/flying-kick2.png
+  artifactKey: Guid(89eb02d4b3eb54763977e974b7c54a9b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/GothicVania Church/Sprites/Player/flying-kick2.png using Guid(89eb02d4b3eb54763977e974b7c54a9b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'df21d4386b2fc31836673a9fdd2999a8') in 0.038519 seconds
+  Import took 0.046423 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000228 seconds.
+  path: Assets/GothicVania Church/Sprites/Player/kick3.png
+  artifactKey: Guid(ac71e01c03cf145ccafaa78004bcf4bb) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/GothicVania Church/Sprites/Player/kick3.png using Guid(ac71e01c03cf145ccafaa78004bcf4bb) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '48bda1e292fab54ac5f096c29a9573c1') in 0.035997 seconds
+  Import took 0.043613 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000340 seconds.
+  path: Assets/GothicVania Church/Sprites/Player/punch1.png
+  artifactKey: Guid(8c2b057cc49584bffb4781471ebcc7ab) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/GothicVania Church/Sprites/Player/punch1.png using Guid(8c2b057cc49584bffb4781471ebcc7ab) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '053182ed27270fa7d33238ba374b1aa4') in 0.035653 seconds
+  Import took 0.040960 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 15.194960 seconds.
+  path: Assets/Gothicvania Swamp Artwork/Sprites
+  artifactKey: Guid(55ddeca2542ec4cd89a833d9ce411bff) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Gothicvania Swamp Artwork/Sprites using Guid(55ddeca2542ec4cd89a833d9ce411bff) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '50a9bc0238793bc60d1bb9ca78a4f3d7') in 0.010121 seconds
+  Import took 0.016841 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.062581 seconds.
+  path: Assets/Gothicvania Swamp Artwork/Sprites/thing1.png
+  artifactKey: Guid(76fdbbd67e8984f79af950670c9297f7) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Gothicvania Swamp Artwork/Sprites/thing1.png using Guid(76fdbbd67e8984f79af950670c9297f7) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '7121ef0e8147945cc28dccda274cdc47') in 0.030844 seconds
+  Import took 0.038898 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000458 seconds.
+  path: Assets/Gothicvania Swamp Artwork/Sprites/thing3.png
+  artifactKey: Guid(ecc24bd2f829c4d4ea395eaf017e62cb) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Gothicvania Swamp Artwork/Sprites/thing3.png using Guid(ecc24bd2f829c4d4ea395eaf017e62cb) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '72a9d5afd1a3146722e2fcdfe3ce1a5c') in 0.024737 seconds
+  Import took 0.030893 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000337 seconds.
+  path: Assets/Gothicvania Swamp Artwork/Sprites/thing4.png
+  artifactKey: Guid(38f830dfb2d824196a327856266c7337) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Gothicvania Swamp Artwork/Sprites/thing4.png using Guid(38f830dfb2d824196a327856266c7337) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '6774fe165d5792efb8e89e5bdacc0616') in 0.031096 seconds
+  Import took 0.036988 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000434 seconds.
+  path: Assets/Gothicvania Swamp Artwork/Sprites/thing2.png
+  artifactKey: Guid(a41ab3b79addf43eca1b75a46687239f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Gothicvania Swamp Artwork/Sprites/thing2.png using Guid(a41ab3b79addf43eca1b75a46687239f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'bbe6cdda039c5c1292d6adc067bd6260') in 0.035425 seconds
+  Import took 0.043898 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.006410 seconds.
+  path: Assets/Gothicvania Swamp Artwork/Sprites/thing2.png
+  artifactKey: Guid(a41ab3b79addf43eca1b75a46687239f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Gothicvania Swamp Artwork/Sprites/thing2.png using Guid(a41ab3b79addf43eca1b75a46687239f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'bbe6cdda039c5c1292d6adc067bd6260') in 0.018599 seconds
+  Import took 0.028627 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 1.320677 seconds.
+  path: Assets/Gothicvania Swamp Artwork/Sprites/Player
+  artifactKey: Guid(9ec12a372e0c946a3b59e7344ef3dcbb) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Gothicvania Swamp Artwork/Sprites/Player using Guid(9ec12a372e0c946a3b59e7344ef3dcbb) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '5b96a4ea639287502e7d3dfd95fef4fa') in 0.007873 seconds
+  Import took 0.013181 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 1.675061 seconds.
+  path: Assets/Gothicvania Swamp Artwork/Sprites/Player/crouch
+  artifactKey: Guid(385881469dbf74c6fb00b90dfae2d526) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Gothicvania Swamp Artwork/Sprites/Player/crouch using Guid(385881469dbf74c6fb00b90dfae2d526) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'acde0be700d5ca79358519955d51a9fb') in 0.016879 seconds
+  Import took 0.023154 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.048432 seconds.
+  path: Assets/Gothicvania Swamp Artwork/Sprites/Player/crouch/crouch1.png
+  artifactKey: Guid(579651ee051574ebb9664dae431cc000) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Gothicvania Swamp Artwork/Sprites/Player/crouch/crouch1.png using Guid(579651ee051574ebb9664dae431cc000) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '46af5b027840f4086d0dfb1b4c63ac31') in 0.023057 seconds
+  Import took 0.030886 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000453 seconds.
+  path: Assets/Gothicvania Swamp Artwork/Sprites/Player/crouch/crouch3.png
+  artifactKey: Guid(c0efe8b884251404faee482989d85492) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Gothicvania Swamp Artwork/Sprites/Player/crouch/crouch3.png using Guid(c0efe8b884251404faee482989d85492) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '43385bf732c379a212caf86b7ffc4b12') in 0.021764 seconds
+  Import took 0.028622 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000455 seconds.
+  path: Assets/Gothicvania Swamp Artwork/Sprites/Player/crouch/crouch2.png
+  artifactKey: Guid(f244369204b8b4792bde407bb2b98c96) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Gothicvania Swamp Artwork/Sprites/Player/crouch/crouch2.png using Guid(f244369204b8b4792bde407bb2b98c96) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '326f7505e267966a8d30787ab37d678b') in 0.019228 seconds
+  Import took 0.023838 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 20.284934 seconds.
+  path: Assets/Scripts/Swordsman.cs
+  artifactKey: Guid(723bfcc2e35f9e44ca2b47d0e5d35d70) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scripts/Swordsman.cs using Guid(723bfcc2e35f9e44ca2b47d0e5d35d70) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'bd7aa4629ee5e27545cae407869d9884') in 0.012760 seconds
+  Import took 0.022851 seconds .
+
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.002175 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for WindowsStandalone target not found
+Refreshing native plugins compatible for Editor in 0.46 ms, found 1 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Mono: successfully reloaded assembly
+- Completed reload, in  1.600 seconds
+Platform modules already initialized, skipping
+Refreshing native plugins compatible for Editor in 0.69 ms, found 1 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 1806 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 88.8 MB.
+System memory in use after: 88.8 MB.
+
+Unloading 12 unused Assets to reduce memory usage. Loaded Objects now: 2272.
+Total: 3.674800 ms (FindLiveObjects: 0.301600 ms CreateObjectMapping: 0.118100 ms MarkObjects: 3.084800 ms  DeleteObjects: 0.167800 ms)
+
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.050901 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for WindowsStandalone target not found
+Refreshing native plugins compatible for Editor in 1.09 ms, found 1 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Mono: successfully reloaded assembly
+- Completed reload, in  2.489 seconds
+Platform modules already initialized, skipping
+Refreshing native plugins compatible for Editor in 0.85 ms, found 1 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 1806 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 88.8 MB.
+System memory in use after: 88.8 MB.
+
+Unloading 12 unused Assets to reduce memory usage. Loaded Objects now: 2276.
+Total: 4.842200 ms (FindLiveObjects: 0.762700 ms CreateObjectMapping: 0.168300 ms MarkObjects: 3.661000 ms  DeleteObjects: 0.247100 ms)
+
+========================================================================
+Received Import Request.
+  Time since last request: 94577.741691 seconds.
+  path: Assets/Prefabs
+  artifactKey: Guid(9f74f9b09bc686043a448a0603683d13) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefabs using Guid(9f74f9b09bc686043a448a0603683d13) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '3ca38bde22b631c0ff0ad40dd41867b4') in 0.019104 seconds
+  Import took 0.025067 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 2.047449 seconds.
+  path: Assets/Gothicvania Cemetery Artwork/Sprites
+  artifactKey: Guid(8a75078c371c446e788514d45d4e7c5c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Gothicvania Cemetery Artwork/Sprites using Guid(8a75078c371c446e788514d45d4e7c5c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '317ba0aa83dbeac9e56768fa8d146464') in 0.037376 seconds
+  Import took 0.047502 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 4.795619 seconds.
+  path: Assets/Gothicvania Cemetery Artwork/Sprites/hero
+  artifactKey: Guid(fa7856773453e4fd08398a13bd8e02a2) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Gothicvania Cemetery Artwork/Sprites/hero using Guid(fa7856773453e4fd08398a13bd8e02a2) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '02d794b312ef0ea5d63bd1075a5b04c1') in 0.394670 seconds
+  Import took 0.417871 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 1.268431 seconds.
+  path: Assets/Gothicvania Cemetery Artwork/Sprites/hero/hero-idle
+  artifactKey: Guid(d4d2f08e18d6a4768a4a980f6b2ca6cc) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Gothicvania Cemetery Artwork/Sprites/hero/hero-idle using Guid(d4d2f08e18d6a4768a4a980f6b2ca6cc) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'c9345f79f57f3d0fe3e135da34070dba') in 0.026290 seconds
+  Import took 0.032992 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.021740 seconds.
+  path: Assets/Gothicvania Cemetery Artwork/Sprites/hero/hero-idle/hero-idle-1.png
+  artifactKey: Guid(2e93c637a24e04d8ea6b2cfd9df53739) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Gothicvania Cemetery Artwork/Sprites/hero/hero-idle/hero-idle-1.png using Guid(2e93c637a24e04d8ea6b2cfd9df53739) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'c17f96928d2afc269d311eebf9870489') in 0.159764 seconds
+  Import took 0.168931 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000423 seconds.
+  path: Assets/Gothicvania Cemetery Artwork/Sprites/hero/hero-idle/hero-idle-3.png
+  artifactKey: Guid(47b8aa1df122e423b8f0d752c67d1e20) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Gothicvania Cemetery Artwork/Sprites/hero/hero-idle/hero-idle-3.png using Guid(47b8aa1df122e423b8f0d752c67d1e20) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'd0340f8bf4345b0b675f98b120c7969a') in 0.067621 seconds
+  Import took 0.074394 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000391 seconds.
+  path: Assets/Gothicvania Cemetery Artwork/Sprites/hero/hero-idle/hero-idle-2.png
+  artifactKey: Guid(d42d163ea135e45a1a268179e818c8fd) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Gothicvania Cemetery Artwork/Sprites/hero/hero-idle/hero-idle-2.png using Guid(d42d163ea135e45a1a268179e818c8fd) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '3e94db1c5bc36ae864c986946fcc96fe') in 0.066908 seconds
+  Import took 0.073224 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000387 seconds.
+  path: Assets/Gothicvania Cemetery Artwork/Sprites/hero/hero-idle/hero-idle-4.png
+  artifactKey: Guid(0ac9ce5c9d1674e1980ff38feb6bc00d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Gothicvania Cemetery Artwork/Sprites/hero/hero-idle/hero-idle-4.png using Guid(0ac9ce5c9d1674e1980ff38feb6bc00d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'c24f8b2eda009c87b195c50ee1d708d1') in 0.054284 seconds
+  Import took 0.061443 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 42.744931 seconds.
+  path: Assets/Animations
+  artifactKey: Guid(64a5e2d0653ec9646a9153e930648cc3) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Animations using Guid(64a5e2d0653ec9646a9153e930648cc3) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'b3ef93132d29a8f7682b426b7d592b77') in 0.018176 seconds
+  Import took 0.031367 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 10.928971 seconds.
+  path: Assets/Animation Controllers
+  artifactKey: Guid(e5f6da8b291cbd644b0f19ded96258bb) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Animation Controllers using Guid(e5f6da8b291cbd644b0f19ded96258bb) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'f26d784e35eb6a323d536b403474af18') in 0.016523 seconds
+  Import took 0.022851 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 1.628675 seconds.
+  path: Assets/SwordsmanIdle.anim
+  artifactKey: Guid(33063e382c988df459ffd3e15cddd3f9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/SwordsmanIdle.anim using Guid(33063e382c988df459ffd3e15cddd3f9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '27fc04d58e770e75e6c7419b12fcac62') in 0.021094 seconds
+  Import took 0.027009 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 3.124865 seconds.
+  path: Assets/hero-idle-1.controller
+  artifactKey: Guid(1ff2b61f46be75648b297991cb196fa2) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/hero-idle-1.controller using Guid(1ff2b61f46be75648b297991cb196fa2) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '7f5b58b8b43353a3e3ccc7670e30013f') in 0.018805 seconds
+  Import took 0.025479 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 2.451768 seconds.
+  path: Assets/Animation Controllers/hero-idle-1.controller
+  artifactKey: Guid(1ff2b61f46be75648b297991cb196fa2) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Animation Controllers/hero-idle-1.controller using Guid(1ff2b61f46be75648b297991cb196fa2) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '04ad23eaabe4345345e87c0e61674776') in 0.010642 seconds
+  Import took 0.066582 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 37.591276 seconds.
+  path: Assets/Animations/SwordsmanIdle.anim
+  artifactKey: Guid(33063e382c988df459ffd3e15cddd3f9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Animations/SwordsmanIdle.anim using Guid(33063e382c988df459ffd3e15cddd3f9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '40c06895725c078d3f06e6107bb3ca88') in 0.007135 seconds
+  Import took 0.010945 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.001176 seconds.
+  path: Assets/Animations/SwordsmanIdle.anim
+  artifactKey: Guid(33063e382c988df459ffd3e15cddd3f9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Animations/SwordsmanIdle.anim using Guid(33063e382c988df459ffd3e15cddd3f9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '40c06895725c078d3f06e6107bb3ca88') in 0.007487 seconds
+  Import took 0.013997 seconds .
+
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.002369 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for WindowsStandalone target not found
+Refreshing native plugins compatible for Editor in 0.74 ms, found 1 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Mono: successfully reloaded assembly
+- Completed reload, in  1.710 seconds
+Platform modules already initialized, skipping
+Refreshing native plugins compatible for Editor in 1.09 ms, found 1 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 1806 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 89.1 MB.
+System memory in use after: 89.1 MB.
+
+Unloading 12 unused Assets to reduce memory usage. Loaded Objects now: 2283.
+Total: 8.084300 ms (FindLiveObjects: 1.089000 ms CreateObjectMapping: 0.183100 ms MarkObjects: 6.630200 ms  DeleteObjects: 0.179900 ms)
+
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.005758 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for WindowsStandalone target not found
+Refreshing native plugins compatible for Editor in 0.49 ms, found 1 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Mono: successfully reloaded assembly
+- Completed reload, in  1.584 seconds
+Platform modules already initialized, skipping
+Refreshing native plugins compatible for Editor in 0.67 ms, found 1 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 1806 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 89.1 MB.
+System memory in use after: 89.1 MB.
+
+Unloading 12 unused Assets to reduce memory usage. Loaded Objects now: 2287.
+Total: 5.152700 ms (FindLiveObjects: 0.797800 ms CreateObjectMapping: 0.262900 ms MarkObjects: 3.911200 ms  DeleteObjects: 0.176700 ms)
+
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.001348 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for WindowsStandalone target not found
+Refreshing native plugins compatible for Editor in 0.98 ms, found 1 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Mono: successfully reloaded assembly
+- Completed reload, in  1.692 seconds
+Platform modules already initialized, skipping
+Refreshing native plugins compatible for Editor in 0.81 ms, found 1 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 1806 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 89.1 MB.
+System memory in use after: 89.1 MB.
+
+Unloading 12 unused Assets to reduce memory usage. Loaded Objects now: 2291.
+Total: 4.411700 ms (FindLiveObjects: 0.568600 ms CreateObjectMapping: 0.168400 ms MarkObjects: 3.471500 ms  DeleteObjects: 0.200200 ms)
+
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.003763 seconds.
 Begin MonoManager ReloadAssembly
 Native extension for WindowsStandalone target not found
 Refreshing native plugins compatible for Editor in 0.45 ms, found 1 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Mono: successfully reloaded assembly
-- Completed reload, in  1.852 seconds
+- Completed reload, in  2.148 seconds
 Platform modules already initialized, skipping
-Refreshing native plugins compatible for Editor in 0.65 ms, found 1 plugins.
+Refreshing native plugins compatible for Editor in 0.67 ms, found 1 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
-Unloading 1804 Unused Serialized files (Serialized files now loaded: 0)
-System memory in use before: 85.4 MB.
-System memory in use after: 85.4 MB.
+Unloading 1806 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 89.1 MB.
+System memory in use after: 89.1 MB.
 
-Unloading 12 unused Assets to reduce memory usage. Loaded Objects now: 2255.
-Total: 4.592600 ms (FindLiveObjects: 0.993200 ms CreateObjectMapping: 0.177900 ms MarkObjects: 3.277200 ms  DeleteObjects: 0.141900 ms)
+Unloading 12 unused Assets to reduce memory usage. Loaded Objects now: 2295.
+Total: 5.095600 ms (FindLiveObjects: 0.455900 ms CreateObjectMapping: 0.264800 ms MarkObjects: 4.062300 ms  DeleteObjects: 0.310200 ms)
 
 ========================================================================
 Received Prepare
 Registering precompiled user dll's ...
-Registered in 0.002465 seconds.
+Registered in 0.003066 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for WindowsStandalone target not found
+Refreshing native plugins compatible for Editor in 0.49 ms, found 1 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Mono: successfully reloaded assembly
+- Completed reload, in  2.292 seconds
+Platform modules already initialized, skipping
+Refreshing native plugins compatible for Editor in 0.79 ms, found 1 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 1806 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 89.1 MB.
+System memory in use after: 89.1 MB.
+
+Unloading 12 unused Assets to reduce memory usage. Loaded Objects now: 2299.
+Total: 5.991200 ms (FindLiveObjects: 0.555800 ms CreateObjectMapping: 0.247100 ms MarkObjects: 4.920700 ms  DeleteObjects: 0.264900 ms)
+
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.001364 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for WindowsStandalone target not found
+Refreshing native plugins compatible for Editor in 0.71 ms, found 1 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Mono: successfully reloaded assembly
+- Completed reload, in  1.526 seconds
+Platform modules already initialized, skipping
+Refreshing native plugins compatible for Editor in 0.66 ms, found 1 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 1806 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 89.1 MB.
+System memory in use after: 89.1 MB.
+
+Unloading 12 unused Assets to reduce memory usage. Loaded Objects now: 2303.
+Total: 4.398300 ms (FindLiveObjects: 0.416900 ms CreateObjectMapping: 0.150200 ms MarkObjects: 3.643300 ms  DeleteObjects: 0.185600 ms)
+
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.001968 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for WindowsStandalone target not found
+Refreshing native plugins compatible for Editor in 0.61 ms, found 1 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Mono: successfully reloaded assembly
+- Completed reload, in  1.700 seconds
+Platform modules already initialized, skipping
+Refreshing native plugins compatible for Editor in 0.68 ms, found 1 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 1806 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 89.1 MB.
+System memory in use after: 89.1 MB.
+
+Unloading 12 unused Assets to reduce memory usage. Loaded Objects now: 2307.
+Total: 3.894500 ms (FindLiveObjects: 0.361500 ms CreateObjectMapping: 0.150400 ms MarkObjects: 3.182200 ms  DeleteObjects: 0.197500 ms)
+
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.001724 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for WindowsStandalone target not found
+Refreshing native plugins compatible for Editor in 0.91 ms, found 1 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Mono: successfully reloaded assembly
+- Completed reload, in  1.983 seconds
+Platform modules already initialized, skipping
+Refreshing native plugins compatible for Editor in 0.68 ms, found 1 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 1806 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 89.2 MB.
+System memory in use after: 89.1 MB.
+
+Unloading 12 unused Assets to reduce memory usage. Loaded Objects now: 2311.
+Total: 4.211500 ms (FindLiveObjects: 0.383400 ms CreateObjectMapping: 0.155000 ms MarkObjects: 3.496400 ms  DeleteObjects: 0.173900 ms)
+
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.001249 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for WindowsStandalone target not found
+Refreshing native plugins compatible for Editor in 0.63 ms, found 1 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Mono: successfully reloaded assembly
+- Completed reload, in  1.681 seconds
+Platform modules already initialized, skipping
+Refreshing native plugins compatible for Editor in 0.68 ms, found 1 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 1806 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 89.2 MB.
+System memory in use after: 89.1 MB.
+
+Unloading 12 unused Assets to reduce memory usage. Loaded Objects now: 2315.
+Total: 5.073600 ms (FindLiveObjects: 1.160400 ms CreateObjectMapping: 0.266500 ms MarkObjects: 3.472600 ms  DeleteObjects: 0.172000 ms)
+
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.001891 seconds.
 Begin MonoManager ReloadAssembly
 Native extension for WindowsStandalone target not found
 Refreshing native plugins compatible for Editor in 0.41 ms, found 1 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Mono: successfully reloaded assembly
-- Completed reload, in  2.005 seconds
+- Completed reload, in  1.039 seconds
 Platform modules already initialized, skipping
-Refreshing native plugins compatible for Editor in 1.08 ms, found 1 plugins.
+Refreshing native plugins compatible for Editor in 0.68 ms, found 1 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
-Unloading 1804 Unused Serialized files (Serialized files now loaded: 0)
-System memory in use before: 85.4 MB.
-System memory in use after: 85.4 MB.
+Unloading 1806 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 89.2 MB.
+System memory in use after: 89.1 MB.
 
-Unloading 12 unused Assets to reduce memory usage. Loaded Objects now: 2259.
-Total: 4.625700 ms (FindLiveObjects: 0.389300 ms CreateObjectMapping: 0.201700 ms MarkObjects: 3.877600 ms  DeleteObjects: 0.154800 ms)
-
-========================================================================
-Received Import Request.
-  Time since last request: 504.472394 seconds.
-  path: Assets/Scripts/TitleScreenUIHandler.cs
-  artifactKey: Guid(bedc80e936111174088dd774d782dafe) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Scripts/TitleScreenUIHandler.cs using Guid(bedc80e936111174088dd774d782dafe) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '883c4526e1b04e2f1c0dae6ccb19af1d') in 0.012189 seconds
-  Import took 0.019754 seconds .
+Unloading 12 unused Assets to reduce memory usage. Loaded Objects now: 2319.
+Total: 3.823100 ms (FindLiveObjects: 0.351300 ms CreateObjectMapping: 0.149900 ms MarkObjects: 3.136200 ms  DeleteObjects: 0.182800 ms)
 
 ========================================================================
 Received Prepare
 Registering precompiled user dll's ...
-Registered in 0.001862 seconds.
+Registered in 0.001757 seconds.
 Begin MonoManager ReloadAssembly
 Native extension for WindowsStandalone target not found
-Refreshing native plugins compatible for Editor in 0.55 ms, found 1 plugins.
+Refreshing native plugins compatible for Editor in 0.42 ms, found 1 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Mono: successfully reloaded assembly
-- Completed reload, in  2.030 seconds
+- Completed reload, in  1.307 seconds
 Platform modules already initialized, skipping
+Refreshing native plugins compatible for Editor in 0.75 ms, found 1 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 1806 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 89.2 MB.
+System memory in use after: 89.2 MB.
+
+Unloading 12 unused Assets to reduce memory usage. Loaded Objects now: 2323.
+Total: 4.559600 ms (FindLiveObjects: 1.223700 ms CreateObjectMapping: 0.180200 ms MarkObjects: 2.979700 ms  DeleteObjects: 0.173000 ms)
+
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.006776 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for WindowsStandalone target not found
+Refreshing native plugins compatible for Editor in 1.14 ms, found 1 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Mono: successfully reloaded assembly
+- Completed reload, in  2.073 seconds
+Platform modules already initialized, skipping
+Refreshing native plugins compatible for Editor in 0.75 ms, found 1 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 1806 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 89.2 MB.
+System memory in use after: 89.2 MB.
+
+Unloading 12 unused Assets to reduce memory usage. Loaded Objects now: 2327.
+Total: 4.241600 ms (FindLiveObjects: 0.360800 ms CreateObjectMapping: 0.150000 ms MarkObjects: 3.524000 ms  DeleteObjects: 0.203700 ms)
+
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.002228 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for WindowsStandalone target not found
+Refreshing native plugins compatible for Editor in 0.78 ms, found 1 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Mono: successfully reloaded assembly
+- Completed reload, in  2.394 seconds
+Platform modules already initialized, skipping
+Refreshing native plugins compatible for Editor in 2.36 ms, found 1 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 1806 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 89.2 MB.
+System memory in use after: 89.2 MB.
+
+Unloading 12 unused Assets to reduce memory usage. Loaded Objects now: 2331.
+Total: 5.525000 ms (FindLiveObjects: 0.389600 ms CreateObjectMapping: 0.150300 ms MarkObjects: 4.775500 ms  DeleteObjects: 0.206400 ms)
+
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.001689 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for WindowsStandalone target not found
+Refreshing native plugins compatible for Editor in 0.67 ms, found 1 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Mono: successfully reloaded assembly
+- Completed reload, in  2.036 seconds
+Platform modules already initialized, skipping
+Refreshing native plugins compatible for Editor in 0.76 ms, found 1 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 1806 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 89.2 MB.
+System memory in use after: 89.2 MB.
+
+Unloading 12 unused Assets to reduce memory usage. Loaded Objects now: 2335.
+Total: 5.641000 ms (FindLiveObjects: 0.557300 ms CreateObjectMapping: 0.235900 ms MarkObjects: 4.627300 ms  DeleteObjects: 0.216500 ms)
+
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.002153 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for WindowsStandalone target not found
+Refreshing native plugins compatible for Editor in 1.07 ms, found 1 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Mono: successfully reloaded assembly
+- Completed reload, in  2.303 seconds
+Platform modules already initialized, skipping
+Refreshing native plugins compatible for Editor in 1.12 ms, found 1 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 1806 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 89.2 MB.
+System memory in use after: 89.2 MB.
+
+Unloading 12 unused Assets to reduce memory usage. Loaded Objects now: 2339.
+Total: 4.534600 ms (FindLiveObjects: 0.437600 ms CreateObjectMapping: 0.180800 ms MarkObjects: 3.712000 ms  DeleteObjects: 0.201000 ms)
+
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.001288 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for WindowsStandalone target not found
 Refreshing native plugins compatible for Editor in 1.01 ms, found 1 plugins.
-Preloading 0 native plugins for Editor in 0.01 ms.
-Unloading 1804 Unused Serialized files (Serialized files now loaded: 0)
-System memory in use before: 85.5 MB.
-System memory in use after: 85.4 MB.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Mono: successfully reloaded assembly
+- Completed reload, in  1.954 seconds
+Platform modules already initialized, skipping
+Refreshing native plugins compatible for Editor in 0.67 ms, found 1 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 1806 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 89.2 MB.
+System memory in use after: 89.2 MB.
 
-Unloading 12 unused Assets to reduce memory usage. Loaded Objects now: 2263.
-Total: 4.504300 ms (FindLiveObjects: 0.389000 ms CreateObjectMapping: 0.193400 ms MarkObjects: 3.714200 ms  DeleteObjects: 0.204900 ms)
+Unloading 12 unused Assets to reduce memory usage. Loaded Objects now: 2343.
+Total: 4.258000 ms (FindLiveObjects: 0.401700 ms CreateObjectMapping: 0.198100 ms MarkObjects: 3.469000 ms  DeleteObjects: 0.186300 ms)
 
-AssetImportWorkerClient::OnTransportError - code=2 error=End of file
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.002075 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for WindowsStandalone target not found
+Refreshing native plugins compatible for Editor in 1.88 ms, found 1 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Mono: successfully reloaded assembly
+- Completed reload, in  2.405 seconds
+Platform modules already initialized, skipping
+Refreshing native plugins compatible for Editor in 1.06 ms, found 1 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 1806 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 89.2 MB.
+System memory in use after: 89.2 MB.
+
+Unloading 12 unused Assets to reduce memory usage. Loaded Objects now: 2347.
+Total: 4.708100 ms (FindLiveObjects: 0.375600 ms CreateObjectMapping: 0.177900 ms MarkObjects: 3.943100 ms  DeleteObjects: 0.208300 ms)
+
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.002666 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for WindowsStandalone target not found
+Refreshing native plugins compatible for Editor in 1.02 ms, found 1 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Mono: successfully reloaded assembly
+- Completed reload, in  2.461 seconds
+Platform modules already initialized, skipping
+Refreshing native plugins compatible for Editor in 0.80 ms, found 1 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 1806 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 89.2 MB.
+System memory in use after: 89.2 MB.
+
+Unloading 12 unused Assets to reduce memory usage. Loaded Objects now: 2351.
+Total: 5.262600 ms (FindLiveObjects: 0.490700 ms CreateObjectMapping: 0.191300 ms MarkObjects: 4.361700 ms  DeleteObjects: 0.215700 ms)
+
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.002259 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for WindowsStandalone target not found
+Refreshing native plugins compatible for Editor in 0.73 ms, found 1 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Mono: successfully reloaded assembly
+- Completed reload, in  2.222 seconds
+Platform modules already initialized, skipping
+Refreshing native plugins compatible for Editor in 0.94 ms, found 1 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 1806 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 89.3 MB.
+System memory in use after: 89.2 MB.
+
+Unloading 12 unused Assets to reduce memory usage. Loaded Objects now: 2355.
+Total: 4.044500 ms (FindLiveObjects: 0.407800 ms CreateObjectMapping: 0.151500 ms MarkObjects: 3.302300 ms  DeleteObjects: 0.180500 ms)
+
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.001296 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for WindowsStandalone target not found
+Refreshing native plugins compatible for Editor in 0.76 ms, found 1 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Mono: successfully reloaded assembly
+- Completed reload, in  2.140 seconds
+Platform modules already initialized, skipping
+Refreshing native plugins compatible for Editor in 1.48 ms, found 1 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 1806 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 89.3 MB.
+System memory in use after: 89.2 MB.
+
+Unloading 12 unused Assets to reduce memory usage. Loaded Objects now: 2359.
+Total: 4.433100 ms (FindLiveObjects: 0.383400 ms CreateObjectMapping: 0.147200 ms MarkObjects: 3.701500 ms  DeleteObjects: 0.198700 ms)
+
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.002607 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for WindowsStandalone target not found
+Refreshing native plugins compatible for Editor in 0.67 ms, found 1 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Mono: successfully reloaded assembly
+- Completed reload, in  2.064 seconds
+Platform modules already initialized, skipping
+Refreshing native plugins compatible for Editor in 0.72 ms, found 1 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 1806 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 89.3 MB.
+System memory in use after: 89.2 MB.
+
+Unloading 12 unused Assets to reduce memory usage. Loaded Objects now: 2363.
+Total: 4.208300 ms (FindLiveObjects: 0.344400 ms CreateObjectMapping: 0.155600 ms MarkObjects: 3.531500 ms  DeleteObjects: 0.172900 ms)
+
+========================================================================
+Received Import Request.
+  Time since last request: 9431.596738 seconds.
+  path: ProjectSettings/TagManager.asset
+  artifactKey: Guid(00000000000000003000000000000000) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing ProjectSettings/TagManager.asset using Guid(00000000000000003000000000000000) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '3be35322f6257a9f44561c54a47ec410') in 0.059748 seconds
+  Import took 0.067809 seconds .
+
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.002522 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for WindowsStandalone target not found
+Refreshing native plugins compatible for Editor in 0.64 ms, found 1 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Mono: successfully reloaded assembly
+- Completed reload, in  1.991 seconds
+Platform modules already initialized, skipping
+Refreshing native plugins compatible for Editor in 0.71 ms, found 1 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 1806 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 89.3 MB.
+System memory in use after: 89.3 MB.
+
+Unloading 13 unused Assets to reduce memory usage. Loaded Objects now: 2367.
+Total: 4.367900 ms (FindLiveObjects: 0.708100 ms CreateObjectMapping: 0.228200 ms MarkObjects: 3.245700 ms  DeleteObjects: 0.183200 ms)
+
+========================================================================
+Received Import Request.
+  Time since last request: 377.463681 seconds.
+  path: Assets/Gothicvania Swamp Artwork/Sprites/Player/crouch-shoot
+  artifactKey: Guid(572a13aa6e71c482ca54302543f068d4) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Gothicvania Swamp Artwork/Sprites/Player/crouch-shoot using Guid(572a13aa6e71c482ca54302543f068d4) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'f75b1034547a25ff175c3a2b8b8ca814') in 0.093621 seconds
+  Import took 0.144339 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 7.231394 seconds.
+  path: Assets/Gothicvania Swamp Artwork/Sprites/Player/crouch-shoot/crouch-shoot1.png
+  artifactKey: Guid(c50e9da2ee7474be996c4ea4c318b41a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Gothicvania Swamp Artwork/Sprites/Player/crouch-shoot/crouch-shoot1.png using Guid(c50e9da2ee7474be996c4ea4c318b41a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '2bcbff0fde09fa54fbe8b347ad95b539') in 0.123009 seconds
+  Import took 0.133547 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000104 seconds.
+  path: Assets/Gothicvania Swamp Artwork/Sprites/Player/crouch-shoot/crouch-shoot2.png
+  artifactKey: Guid(4ed2fcb05d8f642b28511a1cd7a6ac52) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Gothicvania Swamp Artwork/Sprites/Player/crouch-shoot/crouch-shoot2.png using Guid(4ed2fcb05d8f642b28511a1cd7a6ac52) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '4b0e65869a6ad7f277803196f7841744') in 0.054852 seconds
+  Import took 0.061555 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000251 seconds.
+  path: Assets/Gothicvania Swamp Artwork/Sprites/Player/crouch-shoot/crouch-shoot3.png
+  artifactKey: Guid(e071276fb7ebc48c198f4433b2e01644) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Gothicvania Swamp Artwork/Sprites/Player/crouch-shoot/crouch-shoot3.png using Guid(e071276fb7ebc48c198f4433b2e01644) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'f5ecaa9243e091c61a206f01835fe3af') in 0.048272 seconds
+  Import took 0.054851 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.006936 seconds.
+  path: Assets/Gothicvania Swamp Artwork/Sprites/Player/crouch-shoot/crouch-shoot3.png
+  artifactKey: Guid(e071276fb7ebc48c198f4433b2e01644) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Gothicvania Swamp Artwork/Sprites/Player/crouch-shoot/crouch-shoot3.png using Guid(e071276fb7ebc48c198f4433b2e01644) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'f5ecaa9243e091c61a206f01835fe3af') in 0.026711 seconds
+  Import took 0.032355 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 4.551356 seconds.
+  path: Assets/Gothicvania Swamp Artwork/Sprites/Player/fall/fall1.png
+  artifactKey: Guid(0bcc783bd6ce34bf99676a25e9a4bae2) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Gothicvania Swamp Artwork/Sprites/Player/fall/fall1.png using Guid(0bcc783bd6ce34bf99676a25e9a4bae2) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'f091239dd0ea49c567c2674db59a2a86') in 0.034679 seconds
+  Import took 0.040681 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000840 seconds.
+  path: Assets/Gothicvania Swamp Artwork/Sprites/Player/fall/fall2.png
+  artifactKey: Guid(7b59e850ac28a44f4bd0c2c249f3bc12) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Gothicvania Swamp Artwork/Sprites/Player/fall/fall2.png using Guid(7b59e850ac28a44f4bd0c2c249f3bc12) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'fb1e65391070ce34b12112bada359e8c') in 0.047442 seconds
+  Import took 0.053427 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 3.506769 seconds.
+  path: Assets/Gothicvania Swamp Artwork/Sprites/Player/hurt/Hurt1.png
+  artifactKey: Guid(911f9f778b9de4ed7b7a1b7ece791faf) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Gothicvania Swamp Artwork/Sprites/Player/hurt/Hurt1.png using Guid(911f9f778b9de4ed7b7a1b7ece791faf) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'c849650b6c8906340a4886278d8729b9') in 0.031052 seconds
+  Import took 0.036278 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000412 seconds.
+  path: Assets/Gothicvania Swamp Artwork/Sprites/Player/hurt/Hurt2.png
+  artifactKey: Guid(5297c6b6379db4edfbf039ac67746175) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Gothicvania Swamp Artwork/Sprites/Player/hurt/Hurt2.png using Guid(5297c6b6379db4edfbf039ac67746175) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '895719360463b8058285e1c0e14471f5') in 0.039706 seconds
+  Import took 0.044670 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.004435 seconds.
+  path: Assets/Gothicvania Swamp Artwork/Sprites/Player/hurt/Hurt2.png
+  artifactKey: Guid(5297c6b6379db4edfbf039ac67746175) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Gothicvania Swamp Artwork/Sprites/Player/hurt/Hurt2.png using Guid(5297c6b6379db4edfbf039ac67746175) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '895719360463b8058285e1c0e14471f5') in 0.022221 seconds
+  Import took 0.030317 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 5.682117 seconds.
+  path: Assets/Gothicvania Swamp Artwork/Sprites/Player/idle/idle1.png
+  artifactKey: Guid(e5cfa9c48ee4d4b7694945b4c8f1c595) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Gothicvania Swamp Artwork/Sprites/Player/idle/idle1.png using Guid(e5cfa9c48ee4d4b7694945b4c8f1c595) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '69e887cb30be1f8c070b4b9a87e0ed70') in 0.034032 seconds
+  Import took 0.040198 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000480 seconds.
+  path: Assets/Gothicvania Swamp Artwork/Sprites/Player/idle/idle3.png
+  artifactKey: Guid(f52e85f0ffd884c759f27cf25aedd5c1) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Gothicvania Swamp Artwork/Sprites/Player/idle/idle3.png using Guid(f52e85f0ffd884c759f27cf25aedd5c1) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '7d35f3c3d0423ef7cfd1b5f07d87d326') in 0.045934 seconds
+  Import took 0.053040 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000394 seconds.
+  path: Assets/Gothicvania Swamp Artwork/Sprites/Player/idle/idle2.png
+  artifactKey: Guid(8ff60eb0c81f744dcacb2893aa847274) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Gothicvania Swamp Artwork/Sprites/Player/idle/idle2.png using Guid(8ff60eb0c81f744dcacb2893aa847274) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'ce30a57c12860f0f179f9134ee11f7e1') in 0.046516 seconds
+  Import took 0.052609 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000480 seconds.
+  path: Assets/Gothicvania Swamp Artwork/Sprites/Player/idle/idle4.png
+  artifactKey: Guid(16f584e6d7a2c47ce983d0f0961ee2a2) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Gothicvania Swamp Artwork/Sprites/Player/idle/idle4.png using Guid(16f584e6d7a2c47ce983d0f0961ee2a2) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '2400cc7117286b05aad247df7e8d406a') in 0.040056 seconds
+  Import took 0.045946 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000410 seconds.
+  path: Assets/Gothicvania Swamp Artwork/Sprites/Player/idle/idle2.png
+  artifactKey: Guid(8ff60eb0c81f744dcacb2893aa847274) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Gothicvania Swamp Artwork/Sprites/Player/idle/idle2.png using Guid(8ff60eb0c81f744dcacb2893aa847274) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'ce30a57c12860f0f179f9134ee11f7e1') in 0.018679 seconds
+  Import took 0.024387 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000264 seconds.
+  path: Assets/Gothicvania Swamp Artwork/Sprites/Player/idle/idle6.png
+  artifactKey: Guid(c53319a242c0144448bf7bfe49003aa7) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Gothicvania Swamp Artwork/Sprites/Player/idle/idle6.png using Guid(c53319a242c0144448bf7bfe49003aa7) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '3f4a9d612c531d14e16d380a32e27dda') in 0.043729 seconds
+  Import took 0.054735 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000303 seconds.
+  path: Assets/Gothicvania Swamp Artwork/Sprites/Player/idle/idle5.png
+  artifactKey: Guid(a022d297f270949a6bfe0daf96be8491) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Gothicvania Swamp Artwork/Sprites/Player/idle/idle5.png using Guid(a022d297f270949a6bfe0daf96be8491) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '579e571cb4585f9ee52414534cc4fedc') in 0.043208 seconds
+  Import took 0.050774 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 6.757202 seconds.
+  path: Assets/Gothicvania Swamp Artwork/Sprites/Player/jump/jump1.png
+  artifactKey: Guid(273f48e7957c3405c8e4f57469d639d8) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Gothicvania Swamp Artwork/Sprites/Player/jump/jump1.png using Guid(273f48e7957c3405c8e4f57469d639d8) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '0810519926ff6e946ae7b3041837820b') in 0.176034 seconds
+  Import took 0.186447 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000574 seconds.
+  path: Assets/Gothicvania Swamp Artwork/Sprites/Player/jump/jump2.png
+  artifactKey: Guid(4acf4171c8483439abe9d7090ffed535) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Gothicvania Swamp Artwork/Sprites/Player/jump/jump2.png using Guid(4acf4171c8483439abe9d7090ffed535) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'a17dc28c8c5a16597450e93f5d30a8c4') in 0.140039 seconds
+  Import took 0.149362 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 5.108274 seconds.
+  path: Assets/Gothicvania Swamp Artwork/Sprites/Player/run/run1.png
+  artifactKey: Guid(ec1afad749f194ddeb8f7bd0a61222cc) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Gothicvania Swamp Artwork/Sprites/Player/run/run1.png using Guid(ec1afad749f194ddeb8f7bd0a61222cc) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '50d6634ecfc3554f86f4edd4c3cfe93d') in 0.037930 seconds
+  Import took 0.047524 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000487 seconds.
+  path: Assets/Gothicvania Swamp Artwork/Sprites/Player/run/run12.png
+  artifactKey: Guid(17517fd26b9a04aa396b47bcbc34337f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Gothicvania Swamp Artwork/Sprites/Player/run/run12.png using Guid(17517fd26b9a04aa396b47bcbc34337f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '6353e51d76305ba4973bde42e3ed32eb') in 0.045586 seconds
+  Import took 0.050227 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000456 seconds.
+  path: Assets/Gothicvania Swamp Artwork/Sprites/Player/run/run14.png
+  artifactKey: Guid(856660e4a0aa34b7a961cb963e301f9d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Gothicvania Swamp Artwork/Sprites/Player/run/run14.png using Guid(856660e4a0aa34b7a961cb963e301f9d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'd6265dd6ff01c42f0429d046531b1027') in 0.044105 seconds
+  Import took 0.050790 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000331 seconds.
+  path: Assets/Gothicvania Swamp Artwork/Sprites/Player/run/run13.png
+  artifactKey: Guid(fbb13ab3ddb41406fb1f9f50e9726883) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Gothicvania Swamp Artwork/Sprites/Player/run/run13.png using Guid(fbb13ab3ddb41406fb1f9f50e9726883) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '06131b0d23479d22c3697921e51c5884') in 0.041603 seconds
+  Import took 0.046811 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000251 seconds.
+  path: Assets/Gothicvania Swamp Artwork/Sprites/Player/run/run2.png
+  artifactKey: Guid(bb5c8c0e81fd3422884f116fef5dafb9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Gothicvania Swamp Artwork/Sprites/Player/run/run2.png using Guid(bb5c8c0e81fd3422884f116fef5dafb9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '8f4424ab8791a84a39cd6c1b8c550813') in 0.046822 seconds
+  Import took 0.051489 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000270 seconds.
+  path: Assets/Gothicvania Swamp Artwork/Sprites/Player/run/run5.png
+  artifactKey: Guid(00726b59c1a874342b6012d7bad2feb4) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Gothicvania Swamp Artwork/Sprites/Player/run/run5.png using Guid(00726b59c1a874342b6012d7bad2feb4) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'b9a259a8f90d40085267ab7ceb9baaaa') in 0.044933 seconds
+  Import took 0.050270 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000379 seconds.
+  path: Assets/Gothicvania Swamp Artwork/Sprites/Player/run/run8.png
+  artifactKey: Guid(2fe5145f0abc2462dbd3db623d8ae9dc) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Gothicvania Swamp Artwork/Sprites/Player/run/run8.png using Guid(2fe5145f0abc2462dbd3db623d8ae9dc) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '8a11f9edf136e8b20e8c141022699988') in 0.041168 seconds
+  Import took 0.049617 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000289 seconds.
+  path: Assets/Gothicvania Swamp Artwork/Sprites/Player/run/run10.png
+  artifactKey: Guid(4cc44d1dd6fed45e382b1d6836ece651) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Gothicvania Swamp Artwork/Sprites/Player/run/run10.png using Guid(4cc44d1dd6fed45e382b1d6836ece651) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'b6a911dd241af7cca83ab64b5d9d9e84') in 0.043025 seconds
+  Import took 0.050100 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000371 seconds.
+  path: Assets/Gothicvania Swamp Artwork/Sprites/Player/run/run4.png
+  artifactKey: Guid(f30a7fe7a365249aaa20ae21815729c4) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Gothicvania Swamp Artwork/Sprites/Player/run/run4.png using Guid(f30a7fe7a365249aaa20ae21815729c4) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '17d5c13ae89742254d53e2ee7c964a55') in 0.040491 seconds
+  Import took 0.046977 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000262 seconds.
+  path: Assets/Gothicvania Swamp Artwork/Sprites/Player/run/run7.png
+  artifactKey: Guid(88b9936b4caff463c82766deb121a5df) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Gothicvania Swamp Artwork/Sprites/Player/run/run7.png using Guid(88b9936b4caff463c82766deb121a5df) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'b49e04b5ebe863ca128a5d9ee66e329c') in 0.042981 seconds
+  Import took 0.047461 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000298 seconds.
+  path: Assets/Gothicvania Swamp Artwork/Sprites/Player/run/run3.png
+  artifactKey: Guid(4c66e25078c3a44849b95e428ea21410) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Gothicvania Swamp Artwork/Sprites/Player/run/run3.png using Guid(4c66e25078c3a44849b95e428ea21410) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '409da71478ddc9a412b646ad41f5d5b1') in 0.042218 seconds
+  Import took 0.048168 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000315 seconds.
+  path: Assets/Gothicvania Swamp Artwork/Sprites/Player/run/run9.png
+  artifactKey: Guid(186397388fee94c0ba0f774cdada2871) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Gothicvania Swamp Artwork/Sprites/Player/run/run9.png using Guid(186397388fee94c0ba0f774cdada2871) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'f63dfd8fceca460fc956d780b5741e51') in 0.042974 seconds
+  Import took 0.047180 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000273 seconds.
+  path: Assets/Gothicvania Swamp Artwork/Sprites/Player/run/run6.png
+  artifactKey: Guid(1a92af1a20f7048f090b2f45e2fd00c0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Gothicvania Swamp Artwork/Sprites/Player/run/run6.png using Guid(1a92af1a20f7048f090b2f45e2fd00c0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'd1a57becfeea86b0eb0f5298b30e1619') in 0.045151 seconds
+  Import took 0.049859 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000375 seconds.
+  path: Assets/Gothicvania Swamp Artwork/Sprites/Player/run/run11.png
+  artifactKey: Guid(15926ade1026841b38dae3e79a82261f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Gothicvania Swamp Artwork/Sprites/Player/run/run11.png using Guid(15926ade1026841b38dae3e79a82261f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '6861aa963a3483bad0105ed4e05f1a66') in 0.041896 seconds
+  Import took 0.046907 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 10.703330 seconds.
+  path: Assets/Gothicvania Swamp Artwork/Sprites/Player/shoot/shoot1.png
+  artifactKey: Guid(9e76170e6a0e9412daa63f8e29724258) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Gothicvania Swamp Artwork/Sprites/Player/shoot/shoot1.png using Guid(9e76170e6a0e9412daa63f8e29724258) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'cb5071cb930f685b057ddb1fa543c7d9') in 0.037916 seconds
+  Import took 0.044842 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000426 seconds.
+  path: Assets/Gothicvania Swamp Artwork/Sprites/Player/shoot/shoot2.png
+  artifactKey: Guid(681a98543f9db4780871adaa4cf0ce91) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Gothicvania Swamp Artwork/Sprites/Player/shoot/shoot2.png using Guid(681a98543f9db4780871adaa4cf0ce91) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '91eee4cdcb921efab0399218bae1026f') in 0.054821 seconds
+  Import took 0.061672 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000314 seconds.
+  path: Assets/Gothicvania Swamp Artwork/Sprites/Player/shoot/shoot3.png
+  artifactKey: Guid(ed27ebe959621472d87ebc4238a1d78b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Gothicvania Swamp Artwork/Sprites/Player/shoot/shoot3.png using Guid(ed27ebe959621472d87ebc4238a1d78b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'a2e6a68cbab4c524aaec379642314469') in 0.053708 seconds
+  Import took 0.058617 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.006780 seconds.
+  path: Assets/Gothicvania Swamp Artwork/Sprites/Player/shoot/shoot3.png
+  artifactKey: Guid(ed27ebe959621472d87ebc4238a1d78b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Gothicvania Swamp Artwork/Sprites/Player/shoot/shoot3.png using Guid(ed27ebe959621472d87ebc4238a1d78b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'a2e6a68cbab4c524aaec379642314469') in 0.026932 seconds
+  Import took 0.035540 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 4.031166 seconds.
+  path: Assets/Gothicvania Swamp Artwork/Sprites/Player/stand/stand.png
+  artifactKey: Guid(8fafb0f7ac835417d9ad4d4337d461ba) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Gothicvania Swamp Artwork/Sprites/Player/stand/stand.png using Guid(8fafb0f7ac835417d9ad4d4337d461ba) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'e15e6247b2f2c0a12b478b28d095893e') in 0.038922 seconds
+  Import took 0.044789 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 10.442343 seconds.
+  path: Assets/Gothicvania Swamp Artwork/Sprites/Spider/spider1.png
+  artifactKey: Guid(066c4a730a3694a4992b8850e5a07fc9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Gothicvania Swamp Artwork/Sprites/Spider/spider1.png using Guid(066c4a730a3694a4992b8850e5a07fc9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '522494d399a08cc9e9004bbdf19ccedb') in 0.129878 seconds
+  Import took 0.143192 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000829 seconds.
+  path: Assets/Gothicvania Swamp Artwork/Sprites/Spider/spider2.png
+  artifactKey: Guid(e914a64d63d9c494dbfd847935a0c9ca) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Gothicvania Swamp Artwork/Sprites/Spider/spider2.png using Guid(e914a64d63d9c494dbfd847935a0c9ca) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '1eb371dcdbb4ff8d0882a55104bd53e6') in 0.083698 seconds
+  Import took 0.093926 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000767 seconds.
+  path: Assets/Gothicvania Swamp Artwork/Sprites/Spider/spider4.png
+  artifactKey: Guid(fb3457b7f12784b65bf5dd96d9df4555) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Gothicvania Swamp Artwork/Sprites/Spider/spider4.png using Guid(fb3457b7f12784b65bf5dd96d9df4555) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'dfedc54a83063b2e3aea79f9b25a4f79') in 0.041862 seconds
+  Import took 0.045765 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000280 seconds.
+  path: Assets/Gothicvania Swamp Artwork/Sprites/Spider/spider3.png
+  artifactKey: Guid(abadf7bfafcb542db96e8215eccd3902) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Gothicvania Swamp Artwork/Sprites/Spider/spider3.png using Guid(abadf7bfafcb542db96e8215eccd3902) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '16192bff86c688fcca82d31c1e93f7ff') in 0.037411 seconds
+  Import took 0.043246 seconds .
+
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.001675 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for WindowsStandalone target not found
+Refreshing native plugins compatible for Editor in 0.75 ms, found 1 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Mono: successfully reloaded assembly
+- Completed reload, in  1.635 seconds
+Platform modules already initialized, skipping
+Refreshing native plugins compatible for Editor in 0.70 ms, found 1 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 1806 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 89.3 MB.
+System memory in use after: 89.3 MB.
+
+Unloading 12 unused Assets to reduce memory usage. Loaded Objects now: 2374.
+Total: 4.616600 ms (FindLiveObjects: 0.416000 ms CreateObjectMapping: 0.164700 ms MarkObjects: 3.868300 ms  DeleteObjects: 0.165500 ms)
+
+========================================================================
+Received Import Request.
+  Time since last request: 153.404219 seconds.
+  path: Assets/Animation Controllers/hero-idle-1.controller
+  artifactKey: Guid(1ff2b61f46be75648b297991cb196fa2) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Animation Controllers/hero-idle-1.controller using Guid(1ff2b61f46be75648b297991cb196fa2) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'afac09eb551e84801657901eb0ace35d') in 0.030752 seconds
+  Import took 0.037672 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 12.006009 seconds.
+  path: Assets/Animation Controllers/Swordsman.controller
+  artifactKey: Guid(1ff2b61f46be75648b297991cb196fa2) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Animation Controllers/Swordsman.controller using Guid(1ff2b61f46be75648b297991cb196fa2) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '304fce5b1a162faf1e43acc10eac52b3') in 0.014598 seconds
+  Import took 0.020582 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 217.761700 seconds.
+  path: Assets/Gothicvania Cemetery Artwork/Sprites/hero/hero-run
+  artifactKey: Guid(f8f34e68523994737a6e56ed1c5ae060) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Gothicvania Cemetery Artwork/Sprites/hero/hero-run using Guid(f8f34e68523994737a6e56ed1c5ae060) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '818835bd2190e34a98713b1d3ce8ea68') in 0.021041 seconds
+  Import took 0.025954 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.048097 seconds.
+  path: Assets/Gothicvania Cemetery Artwork/Sprites/hero/hero-run/hero-run-1.png
+  artifactKey: Guid(3ab6c90b86c584ba9b2d3c294c0f18fe) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Gothicvania Cemetery Artwork/Sprites/hero/hero-run/hero-run-1.png using Guid(3ab6c90b86c584ba9b2d3c294c0f18fe) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '5745c9205890e266febe0da3f1783e22') in 0.152754 seconds
+  Import took 0.157724 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000469 seconds.
+  path: Assets/Gothicvania Cemetery Artwork/Sprites/hero/hero-run/hero-run-5.png
+  artifactKey: Guid(abacb267f8fce4ed589aef58e6cdfecd) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Gothicvania Cemetery Artwork/Sprites/hero/hero-run/hero-run-5.png using Guid(abacb267f8fce4ed589aef58e6cdfecd) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'f7d1d1a1bff98434f793032b2eb36ed0') in 0.115029 seconds
+  Import took 0.122517 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000611 seconds.
+  path: Assets/Gothicvania Cemetery Artwork/Sprites/hero/hero-run/hero-run-2.png
+  artifactKey: Guid(2fdb114b59d5c44289ec0c7ab258979d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Gothicvania Cemetery Artwork/Sprites/hero/hero-run/hero-run-2.png using Guid(2fdb114b59d5c44289ec0c7ab258979d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '1e2da8b4b264e618f73fb50207d9d77e') in 0.073485 seconds
+  Import took 0.080872 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000692 seconds.
+  path: Assets/Gothicvania Cemetery Artwork/Sprites/hero/hero-run/hero-run-6.png
+  artifactKey: Guid(a63af4d6a65b042e69387b3a6a5a576a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Gothicvania Cemetery Artwork/Sprites/hero/hero-run/hero-run-6.png using Guid(a63af4d6a65b042e69387b3a6a5a576a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '5d4600b3511c1b84417bdaff27c7d85e') in 0.043623 seconds
+  Import took 0.048380 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000480 seconds.
+  path: Assets/Gothicvania Cemetery Artwork/Sprites/hero/hero-run/hero-run-2.png
+  artifactKey: Guid(2fdb114b59d5c44289ec0c7ab258979d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Gothicvania Cemetery Artwork/Sprites/hero/hero-run/hero-run-2.png using Guid(2fdb114b59d5c44289ec0c7ab258979d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '1e2da8b4b264e618f73fb50207d9d77e') in 0.022403 seconds
+  Import took 0.027501 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000313 seconds.
+  path: Assets/Gothicvania Cemetery Artwork/Sprites/hero/hero-run/hero-run-4.png
+  artifactKey: Guid(85ec74a8412004e7bab3cb0f2699b342) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Gothicvania Cemetery Artwork/Sprites/hero/hero-run/hero-run-4.png using Guid(85ec74a8412004e7bab3cb0f2699b342) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'fb42d295fe558d146e274a1dc82c5f73') in 0.041276 seconds
+  Import took 0.046027 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000302 seconds.
+  path: Assets/Gothicvania Cemetery Artwork/Sprites/hero/hero-run/hero-run-3.png
+  artifactKey: Guid(c7050d8e26fb84052ac836ec92969c5e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Gothicvania Cemetery Artwork/Sprites/hero/hero-run/hero-run-3.png using Guid(c7050d8e26fb84052ac836ec92969c5e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'b7ca46b20517a26bfca65f540a8ace0b') in 0.084100 seconds
+  Import took 0.090451 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 26.836051 seconds.
+  path: Assets/Animations/Swordsman
+  artifactKey: Guid(8b4c834973038974ca9a2ce9d4006156) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Animations/Swordsman using Guid(8b4c834973038974ca9a2ce9d4006156) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'c51dadd6b64d4fdd237d0973502ef473') in 0.009059 seconds
+  Import took 0.022850 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 16.716044 seconds.
+  path: Assets/Animations/New Animation.anim
+  artifactKey: Guid(a7ea94d22518a554bb1908812994f771) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Animations/New Animation.anim using Guid(a7ea94d22518a554bb1908812994f771) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '71ccfd8aa4a1dba8e746eadddee5e0ac') in 0.025919 seconds
+  Import took 0.035550 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 58.606932 seconds.
+  path: Assets/Animations/Swordsman/hero-run-1.controller
+  artifactKey: Guid(c57ebd7311e3cbc4f99e9ebd402eb070) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Animations/Swordsman/hero-run-1.controller using Guid(c57ebd7311e3cbc4f99e9ebd402eb070) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '1bda855d1441802065e80868499a63c6') in 0.013619 seconds
+  Import took 0.024209 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 15.927843 seconds.
+  path: Assets/Animations/Swordsman/SwordsmanRun.anim
+  artifactKey: Guid(076d31bfc5cbb064b949de5ab31e8585) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Animations/Swordsman/SwordsmanRun.anim using Guid(076d31bfc5cbb064b949de5ab31e8585) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '1ba7f6ed3de6212260bdce935dc58369') in 0.020807 seconds
+  Import took 0.026186 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.004503 seconds.
+  path: Assets/Animations/Swordsman/SwordsmanRun.anim
+  artifactKey: Guid(076d31bfc5cbb064b949de5ab31e8585) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Animations/Swordsman/SwordsmanRun.anim using Guid(076d31bfc5cbb064b949de5ab31e8585) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '1ba7f6ed3de6212260bdce935dc58369') in 0.011009 seconds
+  Import took 0.019866 seconds .
+
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.001269 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for WindowsStandalone target not found
+Refreshing native plugins compatible for Editor in 0.43 ms, found 1 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Mono: successfully reloaded assembly
+- Completed reload, in  1.759 seconds
+Platform modules already initialized, skipping
+Refreshing native plugins compatible for Editor in 0.73 ms, found 1 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 1806 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 89.3 MB.
+System memory in use after: 89.3 MB.
+
+Unloading 12 unused Assets to reduce memory usage. Loaded Objects now: 2379.
+Total: 4.783400 ms (FindLiveObjects: 0.789400 ms CreateObjectMapping: 0.248200 ms MarkObjects: 3.574900 ms  DeleteObjects: 0.168300 ms)
+
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.002270 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for WindowsStandalone target not found
+Refreshing native plugins compatible for Editor in 1.30 ms, found 1 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Mono: successfully reloaded assembly
+- Completed reload, in  2.452 seconds
+Platform modules already initialized, skipping
+Refreshing native plugins compatible for Editor in 0.75 ms, found 1 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 1806 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 89.4 MB.
+System memory in use after: 89.3 MB.
+
+Unloading 12 unused Assets to reduce memory usage. Loaded Objects now: 2383.
+Total: 5.305900 ms (FindLiveObjects: 0.634800 ms CreateObjectMapping: 0.198100 ms MarkObjects: 4.244100 ms  DeleteObjects: 0.225900 ms)
+
+========================================================================
+Received Import Request.
+  Time since last request: 252.053876 seconds.
+  path: Assets/Animation Controllers/Swordsman.controller
+  artifactKey: Guid(1ff2b61f46be75648b297991cb196fa2) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Animation Controllers/Swordsman.controller using Guid(1ff2b61f46be75648b297991cb196fa2) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '12de58a5032213db475e21f7adc4311a') in 0.047551 seconds
+  Import took 0.059546 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 58.481186 seconds.
+  path: Assets/Gothicvania Cemetery Artwork/Sprites/hero/hero-jump/hero-jump-1.png
+  artifactKey: Guid(524b5c7e638cf48d3a4c0d3ede2f4768) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Gothicvania Cemetery Artwork/Sprites/hero/hero-jump/hero-jump-1.png using Guid(524b5c7e638cf48d3a4c0d3ede2f4768) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '33dafe49fd31a3d798953479d7ae8a80') in 0.160313 seconds
+  Import took 0.166669 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000334 seconds.
+  path: Assets/Gothicvania Cemetery Artwork/Sprites/hero/hero-jump/hero-jump-4.png
+  artifactKey: Guid(e24df99c276a946cdb2b9eced4636715) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Gothicvania Cemetery Artwork/Sprites/hero/hero-jump/hero-jump-4.png using Guid(e24df99c276a946cdb2b9eced4636715) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '5f81758de174f074ff93294523966d35') in 0.084237 seconds
+  Import took 0.091444 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000492 seconds.
+  path: Assets/Gothicvania Cemetery Artwork/Sprites/hero/hero-jump/hero-jump-3.png
+  artifactKey: Guid(52d0963219cea42848f5d73f7d7dc411) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Gothicvania Cemetery Artwork/Sprites/hero/hero-jump/hero-jump-3.png using Guid(52d0963219cea42848f5d73f7d7dc411) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '62f79d34ce7b3301147ff37e747ad2d7') in 0.064353 seconds
+  Import took 0.070827 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000264 seconds.
+  path: Assets/Gothicvania Cemetery Artwork/Sprites/hero/hero-jump/hero-jump-2.png
+  artifactKey: Guid(fa30da05166464cc2b0a50c521d038aa) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Gothicvania Cemetery Artwork/Sprites/hero/hero-jump/hero-jump-2.png using Guid(fa30da05166464cc2b0a50c521d038aa) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '9079961bbbba76c22fb204b0cba52153') in 0.109807 seconds
+  Import took 0.114827 seconds .
+
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.004385 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for WindowsStandalone target not found
+Refreshing native plugins compatible for Editor in 1.08 ms, found 1 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Mono: successfully reloaded assembly
+- Completed reload, in  2.271 seconds
+Platform modules already initialized, skipping
+Refreshing native plugins compatible for Editor in 0.82 ms, found 1 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 1806 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 89.4 MB.
+System memory in use after: 89.4 MB.
+
+Unloading 12 unused Assets to reduce memory usage. Loaded Objects now: 2388.
+Total: 5.242300 ms (FindLiveObjects: 0.446900 ms CreateObjectMapping: 0.187000 ms MarkObjects: 4.264000 ms  DeleteObjects: 0.338100 ms)
+
+========================================================================
+Received Import Request.
+  Time since last request: 46.649744 seconds.
+  path: Assets/Animations/Swordsman/hero-jump-1.controller
+  artifactKey: Guid(9cc8a6e002cbd874eb1711178b8e55cb) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Animations/Swordsman/hero-jump-1.controller using Guid(9cc8a6e002cbd874eb1711178b8e55cb) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'f27df314ea5e1834f235863924e5ea59') in 0.028269 seconds
+  Import took 0.033758 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 12.715777 seconds.
+  path: Assets/Animations/Swordsman/SwordsmanRun.anim
+  artifactKey: Guid(076d31bfc5cbb064b949de5ab31e8585) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Animations/Swordsman/SwordsmanRun.anim using Guid(076d31bfc5cbb064b949de5ab31e8585) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '6fe39d9be91ce14edcfeb0ee16570a81') in 0.010923 seconds
+  Import took 0.017628 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 1.095061 seconds.
+  path: Assets/Animations/Swordsman/SwordsmanJump.anim
+  artifactKey: Guid(b54e8d07f90caaa4d82802c6b188ec59) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Animations/Swordsman/SwordsmanJump.anim using Guid(b54e8d07f90caaa4d82802c6b188ec59) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '130bf28d3efe493d2eed8e9e0e20b4b1') in 0.018427 seconds
+  Import took 0.024482 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.001904 seconds.
+  path: Assets/Animations/Swordsman/SwordsmanJump.anim
+  artifactKey: Guid(b54e8d07f90caaa4d82802c6b188ec59) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Animations/Swordsman/SwordsmanJump.anim using Guid(b54e8d07f90caaa4d82802c6b188ec59) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '130bf28d3efe493d2eed8e9e0e20b4b1') in 0.010731 seconds
+  Import took 0.016683 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 83.270624 seconds.
+  path: Assets/Animations/Swordsman/SwordsmanJump.anim
+  artifactKey: Guid(b54e8d07f90caaa4d82802c6b188ec59) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Animations/Swordsman/SwordsmanJump.anim using Guid(b54e8d07f90caaa4d82802c6b188ec59) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '5e99d46c565f76f4b880b8b0be7b44a9') in 0.018978 seconds
+  Import took 0.028083 seconds .
+
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.004812 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for WindowsStandalone target not found
+Refreshing native plugins compatible for Editor in 1.03 ms, found 1 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Mono: successfully reloaded assembly
+- Completed reload, in  2.346 seconds
+Platform modules already initialized, skipping
+Refreshing native plugins compatible for Editor in 0.90 ms, found 1 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 1806 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 89.4 MB.
+System memory in use after: 89.4 MB.
+
+Unloading 12 unused Assets to reduce memory usage. Loaded Objects now: 2392.
+Total: 7.712800 ms (FindLiveObjects: 1.143100 ms CreateObjectMapping: 0.256600 ms MarkObjects: 6.117700 ms  DeleteObjects: 0.192500 ms)
+
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.001238 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for WindowsStandalone target not found
+Refreshing native plugins compatible for Editor in 1.12 ms, found 1 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Mono: successfully reloaded assembly
+- Completed reload, in  2.232 seconds
+Platform modules already initialized, skipping
+Refreshing native plugins compatible for Editor in 0.81 ms, found 1 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 1806 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 89.4 MB.
+System memory in use after: 89.4 MB.
+
+Unloading 12 unused Assets to reduce memory usage. Loaded Objects now: 2396.
+Total: 4.584700 ms (FindLiveObjects: 0.432900 ms CreateObjectMapping: 0.165400 ms MarkObjects: 3.741900 ms  DeleteObjects: 0.229100 ms)
+
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.002180 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for WindowsStandalone target not found
+Refreshing native plugins compatible for Editor in 0.73 ms, found 1 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Mono: successfully reloaded assembly
+- Completed reload, in  2.237 seconds
+Platform modules already initialized, skipping
+Refreshing native plugins compatible for Editor in 0.79 ms, found 1 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 1806 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 89.4 MB.
+System memory in use after: 89.4 MB.
+
+Unloading 12 unused Assets to reduce memory usage. Loaded Objects now: 2400.
+Total: 4.825600 ms (FindLiveObjects: 0.458600 ms CreateObjectMapping: 0.172700 ms MarkObjects: 3.976400 ms  DeleteObjects: 0.215500 ms)
+
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.001858 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for WindowsStandalone target not found
+Refreshing native plugins compatible for Editor in 0.40 ms, found 1 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Mono: successfully reloaded assembly
+- Completed reload, in  1.455 seconds
+Platform modules already initialized, skipping
+Refreshing native plugins compatible for Editor in 0.66 ms, found 1 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 1806 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 89.4 MB.
+System memory in use after: 89.4 MB.
+
+Unloading 12 unused Assets to reduce memory usage. Loaded Objects now: 2404.
+Total: 4.618700 ms (FindLiveObjects: 0.983400 ms CreateObjectMapping: 0.152300 ms MarkObjects: 3.278800 ms  DeleteObjects: 0.201500 ms)
+
