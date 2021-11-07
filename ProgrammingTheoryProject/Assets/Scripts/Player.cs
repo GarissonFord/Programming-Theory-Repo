@@ -4,7 +4,7 @@ using UnityEngine;
 
 public abstract class Player : MonoBehaviour
 {
-    private Rigidbody2D rb;
+    protected Rigidbody2D rb;
     protected Animator animator;
 
     [SerializeField] protected float moveSpeed;
@@ -26,9 +26,17 @@ public abstract class Player : MonoBehaviour
     {
         horizontal = Input.GetAxis("Horizontal");
         if (horizontal != 0.0f)
+        {
             Move();
+            animator.SetBool("IsMoving", true);
+        }
+        else
+            animator.SetBool("IsMoving", false);
 
         GroundCheck();
+
+        if (Input.GetButtonDown("Attack") && grounded)
+            Attack();
 
         if (Input.GetButtonDown("Jump") && grounded)
             Jump();
@@ -54,6 +62,7 @@ public abstract class Player : MonoBehaviour
 
     protected virtual void Attack()
     {
+        animator.SetTrigger("Attack");
         Debug.Log("Attack selected");
     }
 
