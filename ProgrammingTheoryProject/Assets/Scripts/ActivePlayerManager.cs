@@ -31,23 +31,23 @@ public class ActivePlayerManager : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.Q))
         {
             // Change activePlayer to the previous player in the List
-            AdjustPlayerIndex(activePlayerIndex--);
+            AdjustPlayerIndex(--activePlayerIndex);
             SwitchPlayer(activePlayerIndex);
         }
         // If player presses E
         else if (Input.GetKeyDown(KeyCode.E))
         {
             // Change activePlayer to the previous player in the List
-            AdjustPlayerIndex(activePlayerIndex++);
+            AdjustPlayerIndex(++activePlayerIndex);
             SwitchPlayer(activePlayerIndex);
         }
     }
 
     void AdjustPlayerIndex(int index)
     {
-        if (index < 0)
+        if (index == -1)
             activePlayerIndex = playerPrefabs.Count - 1;
-        else if (index > playerPrefabs.Count - 1)
+        else if (index == playerPrefabs.Count)
             activePlayerIndex = 0;
     }
 
