@@ -344,10 +344,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0a737fb6dfdbcb848908c43f9cbc0006, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  players:
+  playerPrefabs:
   - {fileID: 7833167271359282179, guid: 58c1c63a39934344098a524579cba180, type: 3}
   - {fileID: 4937147992668290245, guid: f4be461af157340409f02bcdf5dd3030, type: 3}
   - {fileID: 1275626976283888711, guid: 4b922186b1ed3e644828bc549a16bb17, type: 3}
+  playerCharacters: []
+  activePlayer: {fileID: 0}
+  activePlayerIndex: 0
 --- !u!4 &2047576241
 Transform:
   m_ObjectHideFlags: 0

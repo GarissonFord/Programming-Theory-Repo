@@ -6,7 +6,7 @@ public class ActivePlayerManager : MonoBehaviour
 {
     [SerializeField] private List<GameObject> playerPrefabs;
     [SerializeField] private List<GameObject> playerCharacters;
-    //[SerializeField] private GameObject activePlayer;
+    [SerializeField] private GameObject activePlayer;
     [SerializeField] private int activePlayerIndex;
 
     // Start is called before the first frame update
@@ -16,15 +16,10 @@ public class ActivePlayerManager : MonoBehaviour
         for (int i = 0; i < playerPrefabs.Count; i++)
         {
             // Instantiate each player
-            Instantiate(playerPrefabs[i]);
             // Set all inactive except one that matches the activePlayer index
             if(i == activePlayerIndex)
             {
-                playerPrefabs[i].SetActive(true);
-            }
-            else
-            {
-                playerPrefabs[i].SetActive(false);
+                activePlayer = Instantiate(playerPrefabs[i]);
             }
         }
     }
@@ -36,23 +31,32 @@ public class ActivePlayerManager : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.Q))
         {
             // Change activePlayer to the previous player in the List
-            SwitchPlayer(activePlayerIndex--);
+            AdjustPlayerIndex(activePlayerIndex--);
+            SwitchPlayer(activePlayerIndex);
         }
         // If player presses E
         else if (Input.GetKeyDown(KeyCode.E))
         {
             // Change activePlayer to the previous player in the List
-            SwitchPlayer(activePlayerIndex++);
+            AdjustPlayerIndex(activePlayerIndex++);
+            SwitchPlayer(activePlayerIndex);
         }
+    }
+
+    void AdjustPlayerIndex(int index)
+    {
+        if (index < 0)
+            activePlayerIndex = playerPrefabs.Count - 1;
+        else if (index > playerPrefabs.Count - 1)
+            activePlayerIndex = 0;
     }
 
     void SwitchPlayer(int i)
     {
-        if (i < 0)
-            i = playerPrefabs.Count - 1;
-        else if (i > playerPrefabs.Count)
-            i = 0;
+        
 
-        playerPrefabs[i].SetActive(true);
+        GameObject newPlayer = Instantiate(playerPrefabs[i], activePlayer.transform.position, activePlayer.transform.rotation);
+        Destroy(activePlayer.gameObject);
+        activePlayer = newPlayer;
     }
 }
