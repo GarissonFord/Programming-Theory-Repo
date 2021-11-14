@@ -4,9 +4,11 @@ using UnityEngine;
 
 public abstract class Player : MonoBehaviour
 {
+    // Component references
     protected Rigidbody2D rb;
     protected Animator animator;
 
+    // Current health of player
     private float m_Health;
     public float health 
     {
@@ -30,13 +32,20 @@ public abstract class Player : MonoBehaviour
         get { return m_MaxHealth; }
     }
 
+    // Movement fields
     [SerializeField] protected float moveSpeed;
     [SerializeField] protected float jumpForce;
     protected float horizontal;
     protected float vertical;
 
+    // Stores information on whether the player is touching the ground
     [SerializeField] protected Transform groundCheck;
     [SerializeField] protected bool grounded;
+
+    // Animator states
+    private AnimatorStateInfo animatorState;
+    protected int currentState;
+    protected int attackState;
 
     protected bool facingRight = true;
 
@@ -73,14 +82,21 @@ public abstract class Player : MonoBehaviour
         else
             animator.SetBool("IsCrouching", false);
 
-        //To test the hurt animation
+        animatorState = animator.GetCurrentAnimatorStateInfo(0);
+        currentState = animatorState.fullPathHash;
+
+        // Prevents the player from moving while attack animation is playing
+        if (currentState == attackState)
+            rb.velocity = Vector2.zero;
+
+        // To test the hurt animation
         if (Input.GetKeyDown(KeyCode.K))
             TakeDamage();
 
-        //Flips when hitting 'right' and facing left
+        // Flips when hitting 'right' and facing left
         if (horizontal > 0 && !facingRight)
             Flip();
-        //Flips when hitting 'left' and facing right
+        // Flips when hitting 'left' and facing right
         else if (horizontal < 0 && facingRight)
             Flip();
     }
