@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class Monk : Player
 {
-    //static int crouchState = Animator.StringToHash("Base Layer.MonkCrouch");
+    int crouchAttackState = Animator.StringToHash("Base Layer.MonkCrouchAttack");
     protected override void Awake()
     {
         base.Awake();
@@ -18,5 +18,10 @@ public class Monk : Player
         // Jumping attack
         if (!grounded && Input.GetButtonDown("Attack"))
             animator.SetTrigger("Attack");
+
+        if (currentState == crouchAttackState)
+            canFlip = false;
+        else
+            canFlip = true;
     }
 }

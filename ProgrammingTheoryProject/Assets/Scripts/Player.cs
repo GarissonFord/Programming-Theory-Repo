@@ -6,6 +6,7 @@ public abstract class Player : MonoBehaviour
 {
     // Component references
     protected Rigidbody2D rb;
+    protected SpriteRenderer sr;
     protected Animator animator;
 
     // Current health of player
@@ -48,10 +49,12 @@ public abstract class Player : MonoBehaviour
     protected int attackState;
 
     protected bool facingRight = true;
+    [SerializeField] protected bool canFlip;
 
     protected virtual void Awake()
     {
         rb = GetComponent<Rigidbody2D>();
+        sr = GetComponent<SpriteRenderer>();
         animator = GetComponent<Animator>();
         health = maxHealth;
     }
@@ -87,17 +90,22 @@ public abstract class Player : MonoBehaviour
 
         // Prevents the player from moving while attack animation is playing
         if (currentState == attackState)
+        {
             rb.velocity = Vector2.zero;
+            canFlip = false;
+        }
+        else
+            canFlip = true;
 
         // To test the hurt animation
         if (Input.GetKeyDown(KeyCode.K))
             TakeDamage();
 
         // Flips when hitting 'right' and facing left
-        if (horizontal > 0 && !facingRight)
+        if (horizontal > 0 && !facingRight && canFlip)
             Flip();
         // Flips when hitting 'left' and facing right
-        else if (horizontal < 0 && facingRight)
+        else if (horizontal < 0 && facingRight && canFlip)
             Flip();
     }
 
@@ -141,14 +149,11 @@ public abstract class Player : MonoBehaviour
     {
         animator.SetTrigger("Hurt");
 
+        // Applies a force to knock the player back, it still needs work considering that 
+        // it works mostly when the player's horizontal movement is 0
         if (facingRight)
             rb.AddForce(Vector2.left + new Vector2(-5.0f, 5.0f), ForceMode2D.Impulse);
         else
             rb.AddForce(Vector2.right + new Vector2(5.0f, 5.0f), ForceMode2D.Impulse);
-    }
-
-    protected virtual void Die()
-    {
-
     }
 }
