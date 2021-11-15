@@ -18,10 +18,5 @@ public class Monk : Player
         // Jumping attack
         if (!grounded && Input.GetButtonDown("Attack"))
             animator.SetTrigger("Attack");
-
-        if (currentState == crouchAttackState)
-            canFlip = false;
-        else
-            canFlip = true;
     }
 }
