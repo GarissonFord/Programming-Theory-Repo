@@ -148,7 +148,6 @@ public abstract class Player : MonoBehaviour
     protected virtual void TakeDamage()
     {
         animator.SetTrigger("Hurt");
-
         // Applies a force to knock the player back, it still needs work considering that 
         // it works mostly when the player's horizontal movement is 0
         if (facingRight)
