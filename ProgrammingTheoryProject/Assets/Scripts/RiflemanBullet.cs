@@ -9,6 +9,11 @@ public class RiflemanBullet : MonoBehaviour
         Destroy(gameObject);
     }
 
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        Destroy(gameObject);
+    }
+
     private void OnBecameInvisible()
     {
         Destroy(gameObject);

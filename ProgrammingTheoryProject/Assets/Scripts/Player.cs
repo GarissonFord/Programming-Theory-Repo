@@ -53,6 +53,8 @@ public abstract class Player : MonoBehaviour
     [SerializeField] protected bool canFlip;
     protected bool hurt;
 
+    [SerializeField] protected GameObject attackHitBox;
+
     protected virtual void Awake()
     {
         rb = GetComponent<Rigidbody2D>();

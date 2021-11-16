@@ -4,6 +4,8 @@ using UnityEngine;
 
 public class Swordsman : Player
 {
+    [SerializeField] private Sprite attackHitboxSprite;
+
     protected override void Awake()
     {
         base.Awake();
@@ -14,5 +16,10 @@ public class Swordsman : Player
     protected override void Update()
     {
         base.Update();
+
+        if (sr.sprite == attackHitboxSprite)
+            attackHitBox.SetActive(true);
+        else
+            attackHitBox.SetActive(false);
     }
 }
