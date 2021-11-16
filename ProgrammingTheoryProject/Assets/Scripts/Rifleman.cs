@@ -20,6 +20,7 @@ public class Rifleman : Player
     {
         base.Awake();
         attackState = Animator.StringToHash("Base Layer.RiflemanAttack");
+        hurtState = Animator.StringToHash("Base Layer.RiflemanHurt");
     }
 
     protected override void Update()

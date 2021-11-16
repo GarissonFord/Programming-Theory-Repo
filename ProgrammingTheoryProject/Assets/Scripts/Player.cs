@@ -47,9 +47,11 @@ public abstract class Player : MonoBehaviour
     private AnimatorStateInfo animatorState;
     protected int currentState;
     protected int attackState;
+    protected int hurtState;
 
     protected bool facingRight = true;
     [SerializeField] protected bool canFlip;
+    protected bool hurt;
 
     protected virtual void Awake()
     {
@@ -64,7 +66,8 @@ public abstract class Player : MonoBehaviour
         horizontal = Input.GetAxis("Horizontal");
         vertical = Input.GetAxisRaw("Vertical");
 
-        if (horizontal != 0.0f)
+        // Do not want the player manipulating their move direction during the hurt animation
+        if (horizontal != 0.0f && !hurt)
         {
             Move();
             animator.SetBool("IsMoving", true);
@@ -96,6 +99,15 @@ public abstract class Player : MonoBehaviour
         }
         else
             canFlip = true;
+
+        if (currentState == hurtState)
+            hurt = true;
+        else
+            hurt = false;
+
+        // Can not flip the player while they're hurt and being knocked back
+        if (hurt)
+            canFlip = false;
 
         // To test the hurt animation
         if (Input.GetKeyDown(KeyCode.K))
