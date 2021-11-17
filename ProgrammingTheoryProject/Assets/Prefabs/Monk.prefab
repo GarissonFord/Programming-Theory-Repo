@@ -186,7 +186,7 @@ GameObject:
   - component: {fileID: 4937147992668290251}
   m_Layer: 0
   m_Name: Monk
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -343,6 +343,7 @@ MonoBehaviour:
   groundCheck: {fileID: 4937147992222875374}
   grounded: 0
   canFlip: 0
+  knockbackForce: 5
   attackHitBox: {fileID: 4186741542592902688}
   crouchAttackHitbox: {fileID: 2942858721830041218}
   jumpAttackHitbox: {fileID: 6917737643550290562}

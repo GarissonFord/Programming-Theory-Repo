@@ -52,6 +52,7 @@ public abstract class Player : MonoBehaviour
     protected bool facingRight = true;
     [SerializeField] protected bool canFlip;
     protected bool hurt;
+    [SerializeField] protected float knockbackForce;
 
     [SerializeField] protected GameObject attackHitBox;
 
@@ -159,14 +160,15 @@ public abstract class Player : MonoBehaviour
         transform.localScale = theScale;
     }
 
-    protected virtual void TakeDamage()
+    public virtual void TakeDamage()
     {
         animator.SetTrigger("Hurt");
         // Applies a force to knock the player back, it still needs work considering that 
         // it works mostly when the player's horizontal movement is 0
+
         if (facingRight)
-            rb.AddForce(Vector2.left + new Vector2(-5.0f, 5.0f), ForceMode2D.Impulse);
+            rb.AddForce((Vector2.left + Vector2.up) * knockbackForce, ForceMode2D.Impulse);
         else
-            rb.AddForce(Vector2.right + new Vector2(5.0f, 5.0f), ForceMode2D.Impulse);
+            rb.AddForce((Vector2.right + Vector2.up) * knockbackForce, ForceMode2D.Impulse);
     }
 }

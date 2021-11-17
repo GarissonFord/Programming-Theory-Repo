@@ -46,7 +46,7 @@ GameObject:
   - component: {fileID: 1275626976283888733}
   m_Layer: 0
   m_Name: Rifleman
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -202,6 +202,8 @@ MonoBehaviour:
   groundCheck: {fileID: 1275626974851993626}
   grounded: 0
   canFlip: 0
+  knockbackForce: 5
+  attackHitBox: {fileID: 0}
   bulletSpeed: 10
   bulletPrefab: {fileID: 5941555532422753477, guid: fc5abbefa57c40c4c8f7c9e611fc835a, type: 3}
   standingFirePosition: {fileID: 3338392539697253357}
