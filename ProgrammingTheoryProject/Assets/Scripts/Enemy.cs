@@ -24,6 +24,8 @@ public abstract class Enemy : MonoBehaviour
         }
     }
 
+    // Damage the enemy can deal
+    [SerializeField] protected float damage;
     [SerializeField] protected float moveSpeed;
 
     protected bool facingRight = true;
@@ -45,6 +47,11 @@ public abstract class Enemy : MonoBehaviour
         currentState = animatorState.fullPathHash;
     }
 
+    protected virtual void Move()
+    {
+
+    }
+
     protected virtual void Flip()
     {
         facingRight = !facingRight;
@@ -56,6 +63,6 @@ public abstract class Enemy : MonoBehaviour
     private void OnTriggerEnter2D(Collider2D collision)
     {
         if (collision.CompareTag("Player"))
-            collision.gameObject.SendMessageUpwards("TakeDamage");
+            collision.gameObject.SendMessageUpwards("TakeDamage", damage);
     }
 }
