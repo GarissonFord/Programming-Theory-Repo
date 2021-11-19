@@ -6,6 +6,7 @@ public abstract class Enemy : MonoBehaviour
 {
     protected Rigidbody2D rb;
     protected Animator animator;
+    protected SpriteRenderer sr;
 
     private float m_Health;
     public float health
@@ -38,6 +39,7 @@ public abstract class Enemy : MonoBehaviour
     {
         rb = GetComponent<Rigidbody2D>();
         animator = GetComponent<Animator>();
+        sr = GetComponent<SpriteRenderer>();
     }
 
     // Update is called once per frame
