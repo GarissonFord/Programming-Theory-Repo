@@ -743,7 +743,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   damage: 0
-  moveSpeed: 2
+  moveSpeed: 0.1
   playerInSight: 0
   groundCheck: {fileID: 605434000}
   grounded: 0
@@ -816,6 +816,10 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7833167271359282204, guid: 58c1c63a39934344098a524579cba180, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7833167271359282205, guid: 58c1c63a39934344098a524579cba180, type: 3}
+      propertyPath: m_FlipX
       value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []

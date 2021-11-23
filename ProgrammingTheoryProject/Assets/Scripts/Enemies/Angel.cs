@@ -5,8 +5,6 @@ using UnityEngine;
 public class Angel : Enemy
 {
     [SerializeField] private bool playerInSight;
-    [SerializeField] private Transform groundCheck;
-    [SerializeField] private bool grounded;
     private Vector2 originalPosition;
     GameObject player;
 
@@ -20,14 +18,12 @@ public class Angel : Enemy
     {
         base.Update();
 
-        GroundCheck();
         // Regularly check for the player in sight
         animator.SetBool("PlayerInSight", playerInSight);
-    }
-
-    void GroundCheck()
-    {
-        grounded = Physics2D.Linecast(transform.position, groundCheck.position, 1 << LayerMask.NameToLayer("Ground"));
+        if (playerInSight)
+            Attack();
+        else
+            ReturnToOriginalPosition();
     }
 
     private void OnTriggerEnter2D(Collider2D collision)
@@ -36,7 +32,6 @@ public class Angel : Enemy
         {
             playerInSight = true;
             player = collision.gameObject;
-            Attack();
         }
     }
 
@@ -45,16 +40,14 @@ public class Angel : Enemy
         if (collision.CompareTag("Player"))
             playerInSight = false;
     }
-
+   
     private void Attack()
     {
-        Debug.Log("Attacking");
-        rb.MovePosition((player.transform.position - transform.position).normalized);
+        rb.MovePosition(Vector2.MoveTowards(transform.position, player.transform.position, moveSpeed));      
     }
 
     private void ReturnToOriginalPosition()
     {
-        while (transform.position.y < originalPosition.y)
-            rb.velocity = Vector2.up * (moveSpeed / 2);
+        rb.MovePosition(Vector2.MoveTowards(transform.position, originalPosition, moveSpeed));
     }
 }
