@@ -302,3 +302,156 @@ System memory in use after: 89.4 MB.
 Unloading 12 unused Assets to reduce memory usage. Loaded Objects now: 2313.
 Total: 5.598300 ms (FindLiveObjects: 0.340000 ms CreateObjectMapping: 0.161500 ms MarkObjects: 4.882100 ms  DeleteObjects: 0.211600 ms)
 
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.001628 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for WindowsStandalone target not found
+Refreshing native plugins compatible for Editor in 3.97 ms, found 1 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Mono: successfully reloaded assembly
+- Completed reload, in  3.595 seconds
+Platform modules already initialized, skipping
+Refreshing native plugins compatible for Editor in 0.75 ms, found 1 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 1821 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 89.4 MB.
+System memory in use after: 89.4 MB.
+
+Unloading 12 unused Assets to reduce memory usage. Loaded Objects now: 2317.
+Total: 4.332600 ms (FindLiveObjects: 0.331600 ms CreateObjectMapping: 0.140500 ms MarkObjects: 3.659500 ms  DeleteObjects: 0.198600 ms)
+
+========================================================================
+Received Import Request.
+  Time since last request: 2814.460413 seconds.
+  path: Assets/Scenes/TitleScreen.unity
+  artifactKey: Guid(44ba9f70755bd52408d23317d3c8c3e8) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scenes/TitleScreen.unity using Guid(44ba9f70755bd52408d23317d3c8c3e8) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '5d7003016d344b2086cddf5ea7787dfb') in 0.076743 seconds
+  Import took 0.084513 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 11.454963 seconds.
+  path: Assets/Scripts/TitleScreenUIHandler.cs
+  artifactKey: Guid(bedc80e936111174088dd774d782dafe) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scripts/TitleScreenUIHandler.cs using Guid(bedc80e936111174088dd774d782dafe) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'a79c430e932fb75f69e7823c393cfca5') in 0.032687 seconds
+  Import took 0.038198 seconds .
+
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.002126 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for WindowsStandalone target not found
+Refreshing native plugins compatible for Editor in 0.98 ms, found 1 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Mono: successfully reloaded assembly
+- Completed reload, in  1.922 seconds
+Platform modules already initialized, skipping
+Refreshing native plugins compatible for Editor in 0.81 ms, found 1 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 1821 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 89.4 MB.
+System memory in use after: 89.4 MB.
+
+Unloading 12 unused Assets to reduce memory usage. Loaded Objects now: 2321.
+Total: 4.602800 ms (FindLiveObjects: 0.394900 ms CreateObjectMapping: 0.363300 ms MarkObjects: 3.641900 ms  DeleteObjects: 0.200100 ms)
+
+========================================================================
+Received Import Request.
+  Time since last request: 21.151341 seconds.
+  path: Assets/Scripts/TitleScreenUIHandler.cs
+  artifactKey: Guid(bedc80e936111174088dd774d782dafe) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scripts/TitleScreenUIHandler.cs using Guid(bedc80e936111174088dd774d782dafe) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '641ee38a3f6f6e513e4192ddf0157482') in 0.020014 seconds
+  Import took 0.028819 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 10.223123 seconds.
+  path: Assets/Scenes/Level1.unity
+  artifactKey: Guid(2772d9c1ae477784e807f4f4f466c60f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scenes/Level1.unity using Guid(2772d9c1ae477784e807f4f4f466c60f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '04f906e5820df38c1a9ea28fffc80929') in 0.036359 seconds
+  Import took 0.055114 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 9.404181 seconds.
+  path: Assets/Prefabs/Player Characters
+  artifactKey: Guid(1f78c450411acf24da630b7d884536b8) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefabs/Player Characters using Guid(1f78c450411acf24da630b7d884536b8) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'c6b3e9c526f36486869d8d2e73cb7d18') in 0.020005 seconds
+  Import took 0.024956 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.060872 seconds.
+  path: Assets/Prefabs/Player Characters/Monk.prefab
+  artifactKey: Guid(f4be461af157340409f02bcdf5dd3030) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefabs/Player Characters/Monk.prefab using Guid(f4be461af157340409f02bcdf5dd3030) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '95522342b3f665a2f35027ebad5004de') in 0.199401 seconds
+  Import took 0.205621 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000389 seconds.
+  path: Assets/Prefabs/Player Characters/Swordsman.prefab
+  artifactKey: Guid(58c1c63a39934344098a524579cba180) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefabs/Player Characters/Swordsman.prefab using Guid(58c1c63a39934344098a524579cba180) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '9bd669193f0ca64f55b0a0388cc7267a') in 0.100224 seconds
+  Import took 0.105266 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000295 seconds.
+  path: Assets/Prefabs/Player Characters/Rifleman.prefab
+  artifactKey: Guid(4b922186b1ed3e644828bc549a16bb17) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefabs/Player Characters/Rifleman.prefab using Guid(4b922186b1ed3e644828bc549a16bb17) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '15131f8e09f32aeba10a4c6a20c7d8b4') in 0.165617 seconds
+  Import took 0.172218 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 39.757891 seconds.
+  path: Assets/Gothicvania Cemetery Artwork/Environment/background.png
+  artifactKey: Guid(df73b4bce81f34a13ad5c1760f1a7a40) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Gothicvania Cemetery Artwork/Environment/background.png using Guid(df73b4bce81f34a13ad5c1760f1a7a40) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'abc246c42bfd6a8fea03b41378a3d5d0') in 0.129994 seconds
+  Import took 0.136290 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000390 seconds.
+  path: Assets/Gothicvania Cemetery Artwork/Environment/objects-Sheet.png
+  artifactKey: Guid(d32d0aa35a58b4f7087cf029122e9820) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Gothicvania Cemetery Artwork/Environment/objects-Sheet.png using Guid(d32d0aa35a58b4f7087cf029122e9820) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '286341c9a5f9f99b76105b4a32396edb') in 0.073536 seconds
+  Import took 0.081148 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000352 seconds.
+  path: Assets/Gothicvania Cemetery Artwork/Environment/mountains.png
+  artifactKey: Guid(392218c362ae54f0f95bcafd5379defd) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Gothicvania Cemetery Artwork/Environment/mountains.png using Guid(392218c362ae54f0f95bcafd5379defd) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'a0d4e2a612fbc3a3ccd32f739fbd11af') in 0.050830 seconds
+  Import took 0.057181 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 3.405451 seconds.
+  path: Assets/Gothicvania Cemetery Artwork/Environment/sliced-objects
+  artifactKey: Guid(e716f3fd88bb44736b2bacf11a554769) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Gothicvania Cemetery Artwork/Environment/sliced-objects using Guid(e716f3fd88bb44736b2bacf11a554769) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'aca73b74a9220e6a84123a21e7439919') in 0.021302 seconds
+  Import took 0.036687 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.101613 seconds.
+  path: Assets/Gothicvania Cemetery Artwork/Environment/sliced-objects/bush-large.png
+  artifactKey: Guid(169c738601686406e9dc499aecfe1539) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Gothicvania Cemetery Artwork/Environment/sliced-objects/bush-large.png using Guid(169c738601686406e9dc499aecfe1539) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'f14be8bcc95ecbb44092e30c9231128f') in 0.045493 seconds
+  Import took 0.094690 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000340 seconds.
+  path: Assets/Gothicvania Cemetery Artwork/Environment/sliced-objects/bush-small.png
+  artifactKey: Guid(36d30963c1b6a4d4ab1c9d7a31b892b2) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Gothicvania Cemetery Artwork/Environment/sliced-objects/bush-small.png using Guid(36d30963c1b6a4d4ab1c9d7a31b892b2) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'e122dd366db43408d992c3192db64e25') in 0.063845 seconds
+  Import took 0.072035 seconds .
+
+AssetImportWorkerClient::OnTransportError - code=2 error=End of file

@@ -10,7 +10,7 @@ public class TitleScreenUIHandler : MonoBehaviour
 {
     public void StartGame()
     {
-        SceneManager.LoadScene("Level");
+        SceneManager.LoadScene("Level1");
     }
 
     public void QuitGame()
