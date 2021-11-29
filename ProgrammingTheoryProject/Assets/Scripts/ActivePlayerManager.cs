@@ -9,9 +9,13 @@ public class ActivePlayerManager : MonoBehaviour
     [SerializeField] private GameObject activePlayer;
     [SerializeField] private int activePlayerIndex;
 
+    private CameraFollow cameraFollow;
+
     // Start is called before the first frame update
     void Start()
     {
+        cameraFollow = FindObjectOfType<CameraFollow>().GetComponent<CameraFollow>();
+
         activePlayerIndex = 0;
         for (int i = 0; i < playerPrefabs.Count; i++)
         {
@@ -58,5 +62,8 @@ public class ActivePlayerManager : MonoBehaviour
         GameObject newPlayer = Instantiate(playerPrefabs[i], activePlayer.transform.position, activePlayer.transform.rotation);
         Destroy(activePlayer.gameObject);
         activePlayer = newPlayer;
+
+        //Allows the camera to focus on the newly switched out player
+        cameraFollow.FindPlayer();
     }
 }

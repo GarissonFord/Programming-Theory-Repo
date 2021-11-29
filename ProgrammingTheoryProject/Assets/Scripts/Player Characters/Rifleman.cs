@@ -40,11 +40,16 @@ public class Rifleman : Player
         if (Time.time - timeSinceLastShotFired >= 0.25f)
         {
             GameObject bullet = Instantiate(bulletPrefab, firePosition.transform.position, firePosition.transform.rotation);
+            SpriteRenderer bulletSr = bullet.GetComponent<SpriteRenderer>();
+            Rigidbody2D bulletRb = bullet.GetComponent<Rigidbody2D>();
             timeSinceLastShotFired = Time.time;
             if (facingRight)
-                bullet.GetComponent<Rigidbody2D>().AddForce(transform.right * bulletSpeed, ForceMode2D.Impulse);
+                bulletRb.velocity = Vector2.right * bulletSpeed;
             else
-                bullet.GetComponent<Rigidbody2D>().AddForce(-transform.right * bulletSpeed, ForceMode2D.Impulse);
+            {
+                bulletRb.velocity = Vector2.left * bulletSpeed;
+                bulletSr.flipX = true;
+            }
         }
     }
 

@@ -82,8 +82,8 @@ GameObject:
   - component: {fileID: 7833167271359282205}
   - component: {fileID: 7833167271359282178}
   - component: {fileID: 7833167271359282207}
-  - component: {fileID: 7833167271359282206}
   - component: {fileID: 7833167271359282201}
+  - component: {fileID: 492288725438684740}
   m_Layer: 0
   m_Name: Swordsman
   m_TagString: Player
@@ -197,32 +197,6 @@ MonoBehaviour:
   knockbackForce: 5
   attackHitBox: {fileID: 7090087152214981888}
   attackHitboxSprite: {fileID: 21300000, guid: 789875796cf924ca192c35bf03329fc4, type: 3}
---- !u!61 &7833167271359282206
-BoxCollider2D:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7833167271359282179}
-  m_Enabled: 1
-  m_Density: 1
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_UsedByEffector: 0
-  m_UsedByComposite: 0
-  m_Offset: {x: 0.007501021, y: -0.06750962}
-  m_SpriteTilingProperty:
-    border: {x: 0, y: 0, z: 0, w: 0}
-    pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 1, y: 0.59}
-    newSize: {x: 1, y: 0.59}
-    adaptiveTilingThreshold: 0.5
-    drawMode: 0
-    adaptiveTiling: 0
-  m_AutoTiling: 0
-  serializedVersion: 2
-  m_Size: {x: 0.28889856, y: 0.45498067}
-  m_EdgeRadius: 0
 --- !u!50 &7833167271359282201
 Rigidbody2D:
   serializedVersion: 4
@@ -244,6 +218,22 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 4
+--- !u!70 &492288725438684740
+CapsuleCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7833167271359282179}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0.028851723, y: -0.06251218}
+  m_Size: {x: 0.22420731, y: 0.46463895}
+  m_Direction: 0
 --- !u!1 &7833167272827977490
 GameObject:
   m_ObjectHideFlags: 0
