@@ -6,12 +6,20 @@ public class RiflemanBullet : MonoBehaviour
 {
     private void OnCollisionEnter2D(Collision2D collision)
     {
-        Destroy(gameObject);
+        if (collision.gameObject.CompareTag("Enemy"))
+        {
+            collision.gameObject.SendMessageUpwards("Die");
+            Destroy(gameObject);
+        }
     }
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        Destroy(gameObject);
+        if (collision.CompareTag("Enemy"))
+        {
+            collision.gameObject.SendMessageUpwards("Die");
+            Destroy(gameObject);
+        }
     }
 
     private void OnBecameInvisible()

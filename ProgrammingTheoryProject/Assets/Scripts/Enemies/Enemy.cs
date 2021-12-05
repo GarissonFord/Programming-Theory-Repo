@@ -31,9 +31,12 @@ public abstract class Enemy : MonoBehaviour
 
     protected bool facingRight = true;
 
+    [SerializeField] protected AnimationClip deathAnimation;
+
     // Animator states
     private AnimatorStateInfo animatorState;
     protected int currentState;
+    protected int deathState;
 
     protected virtual void Awake()
     {
@@ -47,6 +50,11 @@ public abstract class Enemy : MonoBehaviour
     {
         animatorState = animator.GetCurrentAnimatorStateInfo(0);
         currentState = animatorState.fullPathHash;
+
+        if(currentState == deathState)
+        {
+            rb.velocity = Vector2.zero;
+        }
     }
 
     protected virtual void Move()
@@ -66,5 +74,18 @@ public abstract class Enemy : MonoBehaviour
     {
         if (collision.CompareTag("Player"))
             collision.gameObject.SendMessageUpwards("TakeDamage", damage);
+    }
+
+    protected virtual void Die()
+    {
+        animator.SetTrigger("Death");
+        StartCoroutine(DeactivateOnAnimationEnd());
+    }
+
+    protected IEnumerator DeactivateOnAnimationEnd()
+    {
+        rb.velocity = Vector2.zero;
+        yield return new WaitForSeconds(deathAnimation.length);
+        gameObject.SetActive(false);
     }
 }

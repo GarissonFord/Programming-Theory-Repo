@@ -10,6 +10,7 @@ public class Skeleton : Enemy
     {
         base.Awake();
         risingState = Animator.StringToHash("Base Layer.SkeletonRise");
+        deathState = Animator.StringToHash("Base Layer.SkeletonDeath");
     }
 
     protected override void Update()
@@ -23,7 +24,7 @@ public class Skeleton : Enemy
     {
         base.Move();
 
-        if (currentState == risingState)
+        if (currentState == risingState || currentState == deathState)
             rb.velocity = Vector2.zero;
         else
             rb.velocity = Vector2.left * moveSpeed;

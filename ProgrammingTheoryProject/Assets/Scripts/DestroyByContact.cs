@@ -9,6 +9,7 @@ public class DestroyByContact : MonoBehaviour
     private void OnTriggerEnter2D(Collider2D collision)
     {
         if (collision.gameObject.CompareTag("Enemy"))
-            Destroy(collision.gameObject);
+            collision.gameObject.SendMessageUpwards("Die");
+            //Destroy(collision.gameObject);
     }
 }
