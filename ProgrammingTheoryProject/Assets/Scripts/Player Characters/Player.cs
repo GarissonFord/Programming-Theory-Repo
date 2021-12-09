@@ -27,6 +27,7 @@ public abstract class Player : MonoBehaviour
         }
     }
 
+    // Will eventually implement enemies that deal damage as a fraction of the player's max health
     private float m_MaxHealth = 100.0f;
     public float maxHealth 
     { 
@@ -51,7 +52,7 @@ public abstract class Player : MonoBehaviour
 
     protected bool facingRight = true;
     [SerializeField] protected bool canFlip;
-    protected bool hurt;
+    [SerializeField] protected bool hurt;
     [SerializeField] protected float knockbackForce;
 
     [SerializeField] protected GameObject attackHitBox;
@@ -79,6 +80,8 @@ public abstract class Player : MonoBehaviour
             animator.SetBool("IsMoving", false);
 
         GroundCheck();
+        if (grounded)
+            hurt = false;
 
         if (Input.GetButtonDown("Attack") && grounded)
             Attack();
@@ -91,6 +94,7 @@ public abstract class Player : MonoBehaviour
         else
             animator.SetBool("IsCrouching", false);
 
+        //Determines what animation state is currently playing
         animatorState = animator.GetCurrentAnimatorStateInfo(0);
         currentState = animatorState.fullPathHash;
 
@@ -110,7 +114,9 @@ public abstract class Player : MonoBehaviour
 
         // Can not flip the player while they're hurt and being knocked back
         if (hurt)
+        {
             canFlip = false;
+        }
 
         // To test the hurt animation
         if (Input.GetKeyDown(KeyCode.K))
@@ -122,6 +128,9 @@ public abstract class Player : MonoBehaviour
         // Flips when hitting 'left' and facing right
         else if (horizontal < 0 && facingRight && canFlip)
             Flip();
+
+        animator.SetFloat("Velocity", Mathf.Abs(rb.velocity.x));
+        Debug.Log(Mathf.Abs(rb.velocity.x));
     }
 
     protected virtual void Move()
@@ -163,12 +172,16 @@ public abstract class Player : MonoBehaviour
     public virtual void TakeDamage()
     {
         animator.SetTrigger("Hurt");
+        rb.velocity = Vector2.zero;
+        //rb.angularVelocity = 0.0f;
+        hurt = true;
+
         // Applies a force to knock the player back, it still needs work considering that 
         // it works mostly when the player's horizontal movement is 0
-
+        
         if (facingRight)
             rb.AddForce((Vector2.left + Vector2.up) * knockbackForce, ForceMode2D.Impulse);
         else
-            rb.AddForce((Vector2.right + Vector2.up) * knockbackForce, ForceMode2D.Impulse);
+            rb.AddForce((Vector2.right + Vector2.up) * knockbackForce, ForceMode2D.Impulse);        
     }
 }
