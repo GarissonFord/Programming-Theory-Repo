@@ -50,8 +50,9 @@ public abstract class Player : MonoBehaviour
     protected int attackState;
     protected int hurtState;
 
-    protected bool facingRight = true;
+    [SerializeField] protected bool facingRight = true;
     [SerializeField] protected bool canFlip;
+
     [SerializeField] protected bool hurt;
     [SerializeField] protected float knockbackForce;
 
@@ -80,6 +81,7 @@ public abstract class Player : MonoBehaviour
             animator.SetBool("IsMoving", false);
 
         GroundCheck();
+
         if (grounded)
             hurt = false;
 
@@ -172,12 +174,9 @@ public abstract class Player : MonoBehaviour
     public virtual void TakeDamage()
     {
         animator.SetTrigger("Hurt");
+        // Set the velocity to zero before knocking the player back
         rb.velocity = Vector2.zero;
-        //rb.angularVelocity = 0.0f;
         hurt = true;
-
-        // Applies a force to knock the player back, it still needs work considering that 
-        // it works mostly when the player's horizontal movement is 0
         
         if (facingRight)
             rb.AddForce((Vector2.left + Vector2.up) * knockbackForce, ForceMode2D.Impulse);

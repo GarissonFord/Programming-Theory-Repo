@@ -193,7 +193,9 @@ MonoBehaviour:
   jumpForce: 7
   groundCheck: {fileID: 7833167272827977709}
   grounded: 0
+  facingRight: 1
   canFlip: 0
+  hurt: 0
   knockbackForce: 5
   attackHitBox: {fileID: 7090087152214981888}
   attackHitboxSprite: {fileID: 21300000, guid: 789875796cf924ca192c35bf03329fc4, type: 3}
@@ -213,7 +215,7 @@ Rigidbody2D:
   m_LinearDrag: 0
   m_AngularDrag: 0.05
   m_GravityScale: 1
-  m_Material: {fileID: 0}
+  m_Material: {fileID: 6200000, guid: 14f05c6921e4016428b097a8302bbe43, type: 2}
   m_Interpolate: 0
   m_SleepingMode: 1
   m_CollisionDetection: 0
