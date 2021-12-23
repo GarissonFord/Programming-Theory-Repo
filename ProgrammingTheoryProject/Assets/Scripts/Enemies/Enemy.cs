@@ -16,7 +16,7 @@ public abstract class Enemy : MonoBehaviour
         {
             if (value < 0.0f)
             {
-                Debug.LogError("Player can't have negative health");
+                Debug.LogError("Enemy can't have negative health");
             }
             else
             {
@@ -51,15 +51,17 @@ public abstract class Enemy : MonoBehaviour
         animatorState = animator.GetCurrentAnimatorStateInfo(0);
         currentState = animatorState.fullPathHash;
 
-        if(currentState == deathState)
+        if (currentState == deathState)
         {
             rb.velocity = Vector2.zero;
         }
+        else
+            Move();
     }
 
     protected virtual void Move()
     {
-
+        
     }
 
     protected virtual void Flip()
@@ -70,20 +72,26 @@ public abstract class Enemy : MonoBehaviour
         transform.localScale = theScale;
     }
 
-    private void OnTriggerEnter2D(Collider2D collision)
+    protected virtual void OnTriggerEnter2D(Collider2D collision)
     {
-        if (collision.CompareTag("Player"))
+        if (collision.gameObject.CompareTag("Player"))
+        {
+            Debug.Log("Collided with player");
             collision.gameObject.SendMessageUpwards("TakeDamage", damage);
+        }
     }
 
     protected virtual void Die()
     {
+        // Prevents the player from taking damage during the death animation
+        GetComponent<Collider2D>().enabled = false;
         animator.SetTrigger("Death");
         StartCoroutine(DeactivateOnAnimationEnd());
     }
 
     protected IEnumerator DeactivateOnAnimationEnd()
     {
+        // Freezes movement of the rigidbody when death animation is playing
         rb.velocity = Vector2.zero;
         yield return new WaitForSeconds(deathAnimation.length);
         gameObject.SetActive(false);

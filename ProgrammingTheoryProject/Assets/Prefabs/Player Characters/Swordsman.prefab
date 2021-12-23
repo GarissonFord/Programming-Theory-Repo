@@ -196,6 +196,7 @@ MonoBehaviour:
   facingRight: 1
   canFlip: 0
   hurt: 0
+  vulnerable: 0
   knockbackForce: 5
   attackHitBox: {fileID: 7090087152214981888}
   attackHitboxSprite: {fileID: 21300000, guid: 789875796cf924ca192c35bf03329fc4, type: 3}

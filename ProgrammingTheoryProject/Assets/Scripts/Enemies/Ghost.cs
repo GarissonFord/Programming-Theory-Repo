@@ -12,6 +12,7 @@ public class Ghost : Enemy
     protected override void Awake()
     {
         base.Awake();
+        deathState = Animator.StringToHash("Base Layer.CemeteryEnemyDeath");
         position = transform.position;
     }
 
@@ -19,7 +20,6 @@ public class Ghost : Enemy
     protected override void Update()
     {
         base.Update();
-        Move();
     }
 
     protected override void Move()

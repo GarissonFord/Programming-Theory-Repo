@@ -10,28 +10,27 @@ public class Skeleton : Enemy
     {
         base.Awake();
         risingState = Animator.StringToHash("Base Layer.SkeletonRise");
-        deathState = Animator.StringToHash("Base Layer.SkeletonDeath");
+        deathState = Animator.StringToHash("Base Layer.CemeteryEnemyDeath");
     }
 
     protected override void Update()
     {
         base.Update();
-
-        Move();
     }
 
     protected override void Move()
     {
         base.Move();
 
-        if (currentState == risingState || currentState == deathState)
+        if (currentState == risingState)
             rb.velocity = Vector2.zero;
         else
             rb.velocity = Vector2.left * moveSpeed;
     }
-
-    private void OnTriggerEnter2D(Collider2D collision)
+    protected override void OnTriggerEnter2D(Collider2D collision)
     {
+        base.OnTriggerEnter2D(collision);
+
         if(collision.CompareTag("Patrol Point"))
         {
             Flip();

@@ -119,7 +119,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   damage: 0
   moveSpeed: 3
-  deathAnimation: {fileID: 7400000, guid: 26679ac8a567877498c914b097fadd17, type: 2}
+  deathAnimation: {fileID: 7400000, guid: b79168f0fcf00084caafbcc2052ddf52, type: 2}
 --- !u!50 &8201312866468352772
 Rigidbody2D:
   serializedVersion: 4

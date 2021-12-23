@@ -54,6 +54,7 @@ public abstract class Player : MonoBehaviour
     [SerializeField] protected bool canFlip;
 
     [SerializeField] protected bool hurt;
+    [SerializeField] protected bool vulnerable;
     [SerializeField] protected float knockbackForce;
 
     [SerializeField] protected GameObject attackHitBox;
@@ -82,6 +83,7 @@ public abstract class Player : MonoBehaviour
 
         GroundCheck();
 
+        // Triggers the end of the hurt animation
         if (grounded)
             hurt = false;
 
@@ -112,7 +114,10 @@ public abstract class Player : MonoBehaviour
         if (currentState == hurtState)
             hurt = true;
         else
+        {
             hurt = false;
+            vulnerable = true;
+        }
 
         // Can not flip the player while they're hurt and being knocked back
         if (hurt)
@@ -122,7 +127,7 @@ public abstract class Player : MonoBehaviour
 
         // To test the hurt animation
         if (Input.GetKeyDown(KeyCode.K))
-            TakeDamage();
+            TakeDamage(0);
 
         // Flips when hitting 'right' and facing left
         if (horizontal > 0 && !facingRight && canFlip)
@@ -132,7 +137,7 @@ public abstract class Player : MonoBehaviour
             Flip();
 
         animator.SetFloat("Velocity", Mathf.Abs(rb.velocity.x));
-        Debug.Log(Mathf.Abs(rb.velocity.x));
+        //Debug.Log(Mathf.Abs(rb.velocity.x));
     }
 
     protected virtual void Move()
@@ -171,16 +176,36 @@ public abstract class Player : MonoBehaviour
         transform.localScale = theScale;
     }
 
-    public virtual void TakeDamage()
+    public virtual void TakeDamage(int damageTaken)
     {
         animator.SetTrigger("Hurt");
         // Set the velocity to zero before knocking the player back
         rb.velocity = Vector2.zero;
         hurt = true;
-        
+        Knockback();
+        vulnerable = false;
+        StartCoroutine(DamageFlash());
+    }
+
+    private void Knockback()
+    {
         if (facingRight)
             rb.AddForce((Vector2.left + Vector2.up) * knockbackForce, ForceMode2D.Impulse);
         else
-            rb.AddForce((Vector2.right + Vector2.up) * knockbackForce, ForceMode2D.Impulse);        
+            rb.AddForce((Vector2.right + Vector2.up) * knockbackForce, ForceMode2D.Impulse);
+    }
+
+    private IEnumerator DamageFlash()
+    {
+        Debug.Log("Started DamageFlash coroutine");
+        while(vulnerable == false)
+        {
+            sr.color = Color.clear;
+            yield return new WaitForSeconds(0.1f);
+            sr.color = Color.white;
+            yield return new WaitForSeconds(0.1f);
+        }
+        yield return new WaitForSeconds(0.25f);
+        Debug.Log("Ended DamageFlash coroutine");
     }
 }

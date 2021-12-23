@@ -145,6 +145,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   damage: 0
   moveSpeed: 1
+  deathAnimation: {fileID: 7400000, guid: b79168f0fcf00084caafbcc2052ddf52, type: 2}
   frequency: 4
   amplitude: 1
   magnitude: 1
