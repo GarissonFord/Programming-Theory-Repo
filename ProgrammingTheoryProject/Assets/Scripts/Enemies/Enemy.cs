@@ -76,8 +76,13 @@ public abstract class Enemy : MonoBehaviour
     {
         if (collision.gameObject.CompareTag("Player"))
         {
-            Debug.Log("Collided with player");
-            collision.gameObject.SendMessageUpwards("TakeDamage", damage);
+            //Debug.Log("Collided with player");
+            Player playerScript = collision.gameObject.GetComponent<Player>();
+            if (playerScript.vulnerable)
+            {
+                //Debug.Log("Player is vulnerable");
+                collision.gameObject.SendMessageUpwards("TakeDamage", damage);
+            }
         }
     }
 
@@ -94,6 +99,7 @@ public abstract class Enemy : MonoBehaviour
         // Freezes movement of the rigidbody when death animation is playing
         rb.velocity = Vector2.zero;
         yield return new WaitForSeconds(deathAnimation.length);
-        gameObject.SetActive(false);
+        //gameObject.SetActive(false);
+        Destroy(gameObject);
     }
 }

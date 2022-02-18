@@ -34,6 +34,8 @@ public abstract class Player : MonoBehaviour
         get { return m_MaxHealth; }
     }
 
+    public bool vulnerable { get; private set; }
+
     // Movement fields
     [SerializeField] protected float moveSpeed;
     [SerializeField] protected float jumpForce;
@@ -54,7 +56,7 @@ public abstract class Player : MonoBehaviour
     [SerializeField] protected bool canFlip;
 
     [SerializeField] protected bool hurt;
-    [SerializeField] protected bool vulnerable;
+    //[SerializeField] protected bool vulnerable;
     [SerializeField] protected float knockbackForce;
 
     [SerializeField] protected GameObject attackHitBox;
@@ -180,7 +182,7 @@ public abstract class Player : MonoBehaviour
     {
         animator.SetTrigger("Hurt");
         // Set the velocity to zero before knocking the player back
-        rb.velocity = Vector2.zero;
+        
         hurt = true;
         Knockback();
         vulnerable = false;
@@ -189,6 +191,7 @@ public abstract class Player : MonoBehaviour
 
     private void Knockback()
     {
+        rb.velocity = Vector2.zero;
         if (facingRight)
             rb.AddForce((Vector2.left + Vector2.up) * knockbackForce, ForceMode2D.Impulse);
         else
@@ -197,7 +200,7 @@ public abstract class Player : MonoBehaviour
 
     private IEnumerator DamageFlash()
     {
-        Debug.Log("Started DamageFlash coroutine");
+        //Debug.Log("Started DamageFlash coroutine");
         while(vulnerable == false)
         {
             sr.color = Color.clear;
@@ -206,6 +209,6 @@ public abstract class Player : MonoBehaviour
             yield return new WaitForSeconds(0.1f);
         }
         yield return new WaitForSeconds(0.25f);
-        Debug.Log("Ended DamageFlash coroutine");
+        //Debug.Log("Ended DamageFlash coroutine");
     }
 }

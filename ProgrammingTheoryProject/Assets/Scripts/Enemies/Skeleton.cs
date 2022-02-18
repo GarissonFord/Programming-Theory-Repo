@@ -31,7 +31,7 @@ public class Skeleton : Enemy
     {
         base.OnTriggerEnter2D(collision);
 
-        if(collision.CompareTag("Patrol Point"))
+        if(collision.gameObject.CompareTag("Patrol Point"))
         {
             Flip();
             moveSpeed = -moveSpeed;
