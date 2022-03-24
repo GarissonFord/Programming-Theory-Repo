@@ -6,6 +6,7 @@ TagManager:
   tags:
   - Enemy
   - Patrol Point
+  - Ground
   layers:
   - Default
   - TransparentFX

@@ -9,6 +9,9 @@ public abstract class Player : MonoBehaviour
     protected SpriteRenderer sr;
     protected Animator animator;
 
+    // State Machine
+    PlayerStateMachine StateMachine;
+
     // Current health of player
     private float m_Health;
     public float health 
@@ -66,6 +69,7 @@ public abstract class Player : MonoBehaviour
         rb = GetComponent<Rigidbody2D>();
         sr = GetComponent<SpriteRenderer>();
         animator = GetComponent<Animator>();
+        //StateMachine = new PlayerStateMachine(this);
         health = maxHealth;
     }
 
