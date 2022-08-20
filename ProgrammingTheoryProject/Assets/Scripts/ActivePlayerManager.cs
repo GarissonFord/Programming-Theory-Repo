@@ -57,8 +57,6 @@ public class ActivePlayerManager : MonoBehaviour
 
     void SwitchPlayer(int i)
     {
-        
-
         GameObject newPlayer = Instantiate(playerPrefabs[i], activePlayer.transform.position, activePlayer.transform.rotation);
         Destroy(activePlayer.gameObject);
         activePlayer = newPlayer;

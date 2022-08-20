@@ -27,6 +27,8 @@ public abstract class Player : MonoBehaviour
         }
     }
 
+    protected Healthbar healthbar;
+
     // Will eventually implement enemies that deal damage as a fraction of the player's max health
     private float m_MaxHealth = 100.0f;
     public float maxHealth 
@@ -180,9 +182,12 @@ public abstract class Player : MonoBehaviour
 
     public virtual void TakeDamage(int damageTaken)
     {
-        animator.SetTrigger("Hurt");
-        // Set the velocity to zero before knocking the player back
-        
+        health -= damageTaken;
+        if (health <= 0.0f)
+            PlayerDeath();
+        else
+
+        animator.SetTrigger("Hurt");   
         hurt = true;
         Knockback();
         vulnerable = false;
@@ -191,6 +196,7 @@ public abstract class Player : MonoBehaviour
 
     private void Knockback()
     {
+        // Set the velocity to zero before knocking the player back
         rb.velocity = Vector2.zero;
         if (facingRight)
             rb.AddForce((Vector2.left + Vector2.up) * knockbackForce, ForceMode2D.Impulse);
@@ -210,5 +216,10 @@ public abstract class Player : MonoBehaviour
         }
         yield return new WaitForSeconds(0.25f);
         //Debug.Log("Ended DamageFlash coroutine");
+    }
+
+    protected virtual void PlayerDeath()
+    {
+
     }
 }
