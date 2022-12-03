@@ -1,9 +1,12 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
-public abstract class Player : MonoBehaviour
-{
+public abstract class Player : MonoBehaviour {
+
+    GameManager gameManager;
+
     // Component references
     protected Rigidbody2D rb;
     protected SpriteRenderer sr;
@@ -11,32 +14,27 @@ public abstract class Player : MonoBehaviour
 
     // Current health of player
     private float m_Health;
-    public float health 
-    {
+    public float health {
         get { return m_Health; } 
-        set 
-        {
-            if (value < 0.0f)
-            {
+        set {
+            if (value < 0.0f) {
                 Debug.LogError("Player can't have negative health");
-            }
-            else
-            {
+            } else {
                 m_Health = value;
             }
         }
     }
 
-    protected Healthbar healthbar;
+    //protected Healthbar healthbar;
+    [SerializeField] private Text healthText;
 
     // Will eventually implement enemies that deal damage as a fraction of the player's max health
     private float m_MaxHealth = 100.0f;
-    public float maxHealth 
-    { 
+    public float maxHealth { 
         get { return m_MaxHealth; }
     }
 
-    public bool vulnerable { get; private set; }
+    [SerializeField] public bool vulnerable { get; set; }
 
     // Movement fields
     [SerializeField] protected float moveSpeed;
@@ -58,21 +56,21 @@ public abstract class Player : MonoBehaviour
     [SerializeField] protected bool canFlip;
 
     [SerializeField] protected bool hurt;
-    //[SerializeField] protected bool vulnerable;
     [SerializeField] protected float knockbackForce;
 
     [SerializeField] protected GameObject attackHitBox;
 
-    protected virtual void Awake()
-    {
+    protected virtual void Awake() {
         rb = GetComponent<Rigidbody2D>();
         sr = GetComponent<SpriteRenderer>();
         animator = GetComponent<Animator>();
         health = maxHealth;
+        healthText = GameObject.Find("Health Text").GetComponent<Text>();
+        healthText.text = "Health: " + health;
+        gameManager = GameObject.Find("GameManager").GetComponent<GameManager>();
     }
 
-    protected virtual void Update()
-    {
+    protected virtual void Update() {
         horizontal = Input.GetAxis("Horizontal");
         vertical = Input.GetAxisRaw("Vertical");
 
@@ -83,13 +81,18 @@ public abstract class Player : MonoBehaviour
             animator.SetBool("IsMoving", true);
         }
         else
+        {
             animator.SetBool("IsMoving", false);
+        }
 
         GroundCheck();
 
         // Triggers the end of the hurt animation
+        // Not needed now that knockback isn't going to require launching the player
+        /*
         if (grounded)
             hurt = false;
+         */
 
         if (Input.GetButtonDown("Attack") && grounded)
             Attack();
@@ -182,14 +185,19 @@ public abstract class Player : MonoBehaviour
 
     public virtual void TakeDamage(int damageTaken)
     {
+        rb.velocity = Vector2.zero;
         health -= damageTaken;
+        healthText.text = "Health: " + health;
         if (health <= 0.0f)
             PlayerDeath();
         else
 
         animator.SetTrigger("Hurt");   
         hurt = true;
-        Knockback();
+        if(!grounded)
+        { 
+            Knockback();
+        }
         vulnerable = false;
         StartCoroutine(DamageFlash());
     }
@@ -206,8 +214,8 @@ public abstract class Player : MonoBehaviour
 
     private IEnumerator DamageFlash()
     {
-        //Debug.Log("Started DamageFlash coroutine");
-        while(vulnerable == false)
+        Debug.Log("Started DamageFlash coroutine");
+        while(hurt == true)
         {
             sr.color = Color.clear;
             yield return new WaitForSeconds(0.1f);
@@ -215,11 +223,21 @@ public abstract class Player : MonoBehaviour
             yield return new WaitForSeconds(0.1f);
         }
         yield return new WaitForSeconds(0.25f);
-        //Debug.Log("Ended DamageFlash coroutine");
+        Debug.Log("Ended DamageFlash coroutine");
+    }
+
+    protected virtual void OnTriggerEnter2D(Collider2D collision)
+    {
+        if(collision.gameObject.CompareTag("Spikes"))
+        {
+            Debug.Log("Collided with spikes");
+            PlayerDeath();
+        }
     }
 
     protected virtual void PlayerDeath()
     {
-
+        gameManager.GameOver();
+        this.gameObject.SetActive(false);
     }
 }

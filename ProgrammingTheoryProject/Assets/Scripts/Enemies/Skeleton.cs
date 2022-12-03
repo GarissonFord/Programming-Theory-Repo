@@ -11,6 +11,7 @@ public class Skeleton : Enemy
         base.Awake();
         risingState = Animator.StringToHash("Base Layer.SkeletonRise");
         deathState = Animator.StringToHash("Base Layer.CemeteryEnemyDeath");
+        damage = 10.0f;
     }
 
     protected override void Update()

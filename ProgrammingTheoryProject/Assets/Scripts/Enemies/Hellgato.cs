@@ -8,6 +8,7 @@ public class Hellgato : Enemy
     {
         base.Awake();
         deathState = Animator.StringToHash("Base Layer.CemeteryEnemyDeath");
+        damage = 15.0f;
     }
 
     // Update is called once per frame
