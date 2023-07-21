@@ -7,31 +7,35 @@ using UnityEngine.SceneManagement;
 
 public class GameManager : MonoBehaviour
 {
-    public Canvas gameOverScreen;
+    public Canvas gameOverScreen, levelCompleteScreen;
     public Button restartButton;
-    // Use this for initialization
+    public AudioListener audioListener;
+
     void Start()
     {
-        gameOverScreen = gameOverScreen.GetComponent<Canvas>();
-        restartButton = restartButton.GetComponent<Button>();
-        gameOverScreen.enabled = false;
+        //gameOverScreen = gameOverScreen.GetComponent<Canvas>();
+        //restartButton = restartButton.GetComponent<Button>();
+        audioListener = GetComponent<AudioListener>();
+    }
+
+    public void LevelComplete()
+    {
+        levelCompleteScreen.gameObject.SetActive(true);
     }
 
     public void GameOver()
     {
-        //Create a menu to either quit or restart the level
-        //gameOverScreen.enabled = true;
-        //restartButton.enabled = true;
-
         gameOverScreen.gameObject.SetActive(true);
         restartButton.gameObject.SetActive(true);
         Debug.Log("GameOver entered");
     }
+
     public void RestartGame()
     {
         Debug.Log("Restart Clicked");
         SceneManager.LoadScene("Level1");
     }
+
     public void QuitGame()
     {
         Debug.Log("Quit Clicked");

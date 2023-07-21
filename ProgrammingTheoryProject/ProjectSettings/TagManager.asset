@@ -7,6 +7,7 @@ TagManager:
   - Enemy
   - Patrol Point
   - Spikes
+  - Goal
   layers:
   - Default
   - TransparentFX

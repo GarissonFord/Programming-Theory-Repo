@@ -3,8 +3,9 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
-public abstract class Player : MonoBehaviour {
-
+// ABSTRACTION
+public abstract class Player : MonoBehaviour
+{
     GameManager gameManager;
 
     // Component references
@@ -12,13 +13,22 @@ public abstract class Player : MonoBehaviour {
     protected SpriteRenderer sr;
     protected Animator animator;
 
+    // Audio
+    [SerializeField] protected AudioSource playerAudioSource;
+    [SerializeField] protected AudioClip playerHurtAudio;
+    [SerializeField] protected AudioClip playerDeathAudio;
+
     // Current health of player
-    private float m_Health;
-    public float health {
+    // ENCAPSULATION
+    [SerializeField] 
+    private int m_Health = 100;
+    public int health {
         get { return m_Health; } 
-        set {
-            if (value < 0.0f) {
-                Debug.LogError("Player can't have negative health");
+        set
+        {
+            if (value <= 0) {
+                m_Health = 0;
+                PlayerDeath();
             } else {
                 m_Health = value;
             }
@@ -29,18 +39,22 @@ public abstract class Player : MonoBehaviour {
     [SerializeField] private Text healthText;
 
     // Will eventually implement enemies that deal damage as a fraction of the player's max health
-    private float m_MaxHealth = 100.0f;
-    public float maxHealth { 
+    // ENCAPSULATION
+    private int m_MaxHealth = 100;
+    public int maxHealth { 
         get { return m_MaxHealth; }
     }
 
+    // ENCAPSULATION
     [SerializeField] public bool vulnerable { get; set; }
 
     // Movement fields
     [SerializeField] protected float moveSpeed;
+    [SerializeField] protected float maxSpeed;
     [SerializeField] protected float jumpForce;
-    protected float horizontal;
-    protected float vertical;
+    [SerializeField] public float horizontal;
+    [SerializeField] public float vertical;
+    [SerializeField] protected bool canMove;
 
     // Stores information on whether the player is touching the ground
     [SerializeField] protected Transform groundCheck;
@@ -52,7 +66,7 @@ public abstract class Player : MonoBehaviour {
     protected int attackState;
     protected int hurtState;
 
-    [SerializeField] protected bool facingRight = true;
+    [SerializeField] public bool facingRight = true;
     [SerializeField] protected bool canFlip;
 
     [SerializeField] protected bool hurt;
@@ -60,22 +74,24 @@ public abstract class Player : MonoBehaviour {
 
     [SerializeField] protected GameObject attackHitBox;
 
-    protected virtual void Awake() {
+    protected virtual void Awake()
+    {
         rb = GetComponent<Rigidbody2D>();
         sr = GetComponent<SpriteRenderer>();
         animator = GetComponent<Animator>();
-        health = maxHealth;
         healthText = GameObject.Find("Health Text").GetComponent<Text>();
         healthText.text = "Health: " + health;
         gameManager = GameObject.Find("GameManager").GetComponent<GameManager>();
+        playerAudioSource = GetComponent<AudioSource>();
     }
 
-    protected virtual void Update() {
+    protected virtual void Update()
+    {
         horizontal = Input.GetAxis("Horizontal");
         vertical = Input.GetAxisRaw("Vertical");
 
         // Do not want the player manipulating their move direction during the hurt animation
-        if (horizontal != 0.0f && !hurt)
+        if (horizontal != 0.0f && hurt != true)
         {
             Move();
             animator.SetBool("IsMoving", true);
@@ -88,22 +104,30 @@ public abstract class Player : MonoBehaviour {
         GroundCheck();
 
         // Triggers the end of the hurt animation
-        // Not needed now that knockback isn't going to require launching the player
-        /*
         if (grounded)
+        { 
             hurt = false;
-         */
+            //canMove = true;
+        }
 
         if (Input.GetButtonDown("Attack") && grounded)
+        {
             Attack();
+        }
 
         if (Input.GetButtonDown("Jump") && grounded)
+        {
             Jump();
+        }
 
         if (vertical < 0.0f && grounded)
+        {
             Crouch();
+        }
         else
+        {
             animator.SetBool("IsCrouching", false);
+        }
 
         //Determines what animation state is currently playing
         animatorState = animator.GetCurrentAnimatorStateInfo(0);
@@ -116,10 +140,15 @@ public abstract class Player : MonoBehaviour {
             canFlip = false;
         }
         else
+        {
             canFlip = true;
+        }
 
         if (currentState == hurtState)
+        {
+            vulnerable = false;
             hurt = true;
+        }
         else
         {
             hurt = false;
@@ -134,22 +163,30 @@ public abstract class Player : MonoBehaviour {
 
         // To test the hurt animation
         if (Input.GetKeyDown(KeyCode.K))
+        {
             TakeDamage(0);
+        }
 
         // Flips when hitting 'right' and facing left
         if (horizontal > 0 && !facingRight && canFlip)
+        {
             Flip();
+        } 
         // Flips when hitting 'left' and facing right
         else if (horizontal < 0 && facingRight && canFlip)
+        {
             Flip();
+        }
 
         animator.SetFloat("Velocity", Mathf.Abs(rb.velocity.x));
-        //Debug.Log(Mathf.Abs(rb.velocity.x));
     }
 
     protected virtual void Move()
     {
-        rb.velocity = new Vector2(horizontal * moveSpeed, rb.velocity.y);
+        if (!hurt)
+        {
+            rb.velocity = new Vector2(horizontal * moveSpeed, rb.velocity.y);
+        }
     }
 
     protected virtual void Jump()
@@ -185,36 +222,54 @@ public abstract class Player : MonoBehaviour {
 
     public virtual void TakeDamage(int damageTaken)
     {
-        rb.velocity = Vector2.zero;
+        hurt = true;
+        canFlip = false;
         health -= damageTaken;
         healthText.text = "Health: " + health;
+
         if (health <= 0.0f)
+        {
             PlayerDeath();
-        else
-
-        animator.SetTrigger("Hurt");   
-        hurt = true;
-        if(!grounded)
-        { 
-            Knockback();
         }
-        vulnerable = false;
-        StartCoroutine(DamageFlash());
-    }
+        else
+        {
+            animator.SetTrigger("Hurt");
+            hurt = true;
+            vulnerable = false;
+            StartCoroutine(DamageFlash());
 
+            playerAudioSource.clip = playerHurtAudio;
+            playerAudioSource.Play();
+        }
+
+        Knockback();
+    }
+    
     private void Knockback()
     {
-        // Set the velocity to zero before knocking the player back
-        rb.velocity = Vector2.zero;
+        rb.AddForce(-rb.velocity, ForceMode2D.Impulse);
+
+        Vector2 knockbackVector;
+        
+        Vector2 xVelocity = new Vector2(rb.velocity.x, 0.0f); 
+
         if (facingRight)
-            rb.AddForce((Vector2.left + Vector2.up) * knockbackForce, ForceMode2D.Impulse);
+        {
+            knockbackVector = (Vector2.left + Vector2.up) * knockbackForce;
+        }
         else
-            rb.AddForce((Vector2.right + Vector2.up) * knockbackForce, ForceMode2D.Impulse);
+        {
+            knockbackVector = (Vector2.right + Vector2.up) * knockbackForce;
+        }
+        
+        Debug.Log("knockbackVector: " + knockbackVector);
+        //rb.AddForce(knockbackVector, ForceMode2D.Impulse);
+        rb.AddRelativeForce(knockbackVector, ForceMode2D.Impulse);
     }
 
     private IEnumerator DamageFlash()
     {
-        Debug.Log("Started DamageFlash coroutine");
+        //Debug.Log("Started DamageFlash coroutine");
         while(hurt == true)
         {
             sr.color = Color.clear;
@@ -223,7 +278,7 @@ public abstract class Player : MonoBehaviour {
             yield return new WaitForSeconds(0.1f);
         }
         yield return new WaitForSeconds(0.25f);
-        Debug.Log("Ended DamageFlash coroutine");
+        //Debug.Log("Ended DamageFlash coroutine");
     }
 
     protected virtual void OnTriggerEnter2D(Collider2D collision)
@@ -231,13 +286,31 @@ public abstract class Player : MonoBehaviour {
         if(collision.gameObject.CompareTag("Spikes"))
         {
             Debug.Log("Collided with spikes");
-            PlayerDeath();
+            TakeDamage(health);
+        }
+
+        if (collision.gameObject.CompareTag("Goal"))
+        {
+            gameManager.LevelComplete();
+            moveSpeed = 0.0f;
+            ParticleSystem particleSystem = GetComponentInChildren<ParticleSystem>();
+            particleSystem.Play();
         }
     }
 
     protected virtual void PlayerDeath()
     {
+        playerAudioSource.PlayOneShot(playerDeathAudio);
+        
+        StartCoroutine(KillOnAnimationEnd());
+    }
+
+    private IEnumerator KillOnAnimationEnd()
+    {
+        sr.color = Color.red;
+        yield return new WaitForSeconds(1.0f);
         gameManager.GameOver();
-        this.gameObject.SetActive(false);
+        //gameObject.SetActive(false);
+        Destroy(gameObject);
     }
 }

@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+// INHERITANCE
 public class Rifleman : Player
 {
     [SerializeField] private float bulletSpeed;
@@ -16,6 +17,7 @@ public class Rifleman : Player
     int crouchAttackState = Animator.StringToHash("Base Layer.RiflemanCrouchAttack");
     private float timeSinceLastShotFired;
 
+    // POLYMORPHISM
     protected override void Awake()
     {
         base.Awake();
@@ -23,6 +25,7 @@ public class Rifleman : Player
         hurtState = Animator.StringToHash("Base Layer.RiflemanHurt");
     }
 
+    // POLYMORPHISM
     protected override void Update()
     {
         base.Update();

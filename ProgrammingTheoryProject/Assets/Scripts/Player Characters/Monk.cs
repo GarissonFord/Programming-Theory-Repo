@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+// INHERITANCE
 public class Monk : Player
 {
     [SerializeField] private GameObject crouchAttackHitbox;
@@ -12,6 +13,7 @@ public class Monk : Player
     [SerializeField] private Sprite crouchAttackHitboxSprite;
     [SerializeField] private Sprite jumpAttackHitboxSprite;
 
+    // POLYMORPHISM
     protected override void Awake()
     {
         base.Awake();
@@ -19,6 +21,7 @@ public class Monk : Player
         hurtState = Animator.StringToHash("Base Layer.MonkHurt");
     }
 
+    // POLYMORPHISM
     protected override void Update()
     {
         base.Update();      

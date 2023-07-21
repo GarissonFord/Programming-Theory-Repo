@@ -2,21 +2,27 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+// ABSTRACTION
 public abstract class Enemy : MonoBehaviour
 {
     protected Rigidbody2D rb;
     protected Animator animator;
     protected SpriteRenderer sr;
+    [SerializeField] protected AudioSource enemyDamageAudioSource;
 
+    [SerializeField]
     private float m_Health;
-    public float health
+    protected float health
     {
+        // ENCAPSULATION
         get { return m_Health; }
         set
         {
-            if (value < 0.0f)
+            if (value <= 0.0f)
             {
-                Debug.LogError("Enemy can't have negative health");
+                m_Health = 0.0f;
+                Die();
+                // Debug.LogError("Enemy can't have negative health");
             }
             else
             {
@@ -26,7 +32,7 @@ public abstract class Enemy : MonoBehaviour
     }
 
     // Damage the enemy can deal
-    [SerializeField] protected float damage;
+    [SerializeField] public float damage;
     [SerializeField] protected float moveSpeed;
 
     protected bool facingRight = true;
@@ -43,6 +49,7 @@ public abstract class Enemy : MonoBehaviour
         rb = GetComponent<Rigidbody2D>();
         animator = GetComponent<Animator>();
         sr = GetComponent<SpriteRenderer>();
+        enemyDamageAudioSource = GetComponent<AudioSource>();
     }
 
     // Update is called once per frame
@@ -56,13 +63,13 @@ public abstract class Enemy : MonoBehaviour
             rb.velocity = Vector2.zero;
         }
         else
+        {
             Move();
+        }
     }
 
-    protected virtual void Move()
-    {
-        
-    }
+    // ABSTRACTION
+    protected abstract void Move();
 
     protected virtual void Flip()
     {
@@ -72,14 +79,67 @@ public abstract class Enemy : MonoBehaviour
         transform.localScale = theScale;
     }
 
-    protected virtual void OnTriggerEnter2D(Collider2D collision)
+    public virtual void TakeDamage(int damageTaken)
+    {
+        health -= damageTaken;
+        enemyDamageAudioSource.Play();
+        StartCoroutine(DamageFlash());
+    }
+
+    private IEnumerator DamageFlash()
+    {
+        //Debug.Log("Started Enemy DamageFlash coroutine");
+        sr.color = Color.clear;
+        yield return new WaitForSeconds(0.1f);
+        sr.color = Color.white;
+        yield return new WaitForSeconds(0.1f);
+        //Debug.Log("Ended Enemy DamageFlash coroutine");
+    }
+
+    protected virtual void OnCollisionEnter2D(Collision2D collision)
     {
         if (collision.gameObject.CompareTag("Player"))
         {
+            Rigidbody2D playerRb = collision.otherCollider.attachedRigidbody;
             //Debug.Log("Collided with player");
             Player playerScript = collision.gameObject.GetComponent<Player>();
             if (playerScript.vulnerable)
             {
+                /*
+                if (playerScript.facingRight)
+                {
+                    playerRb.AddForce((Vector2.left + Vector2.up) * 5.0f, ForceMode2D.Impulse);
+                }
+                else
+                {
+                    playerRb.AddForce((Vector2.right + Vector2.up) * 5.0f, ForceMode2D.Impulse);
+                }
+                */
+                //Debug.Log("Player is vulnerable");
+                collision.gameObject.SendMessageUpwards("TakeDamage", damage);
+            }
+        }
+    }
+
+    protected virtual void OnTriggerEnter2D(Collider2D collision)
+    {
+        if (collision.gameObject.CompareTag("Player"))
+        {
+            Rigidbody2D playerRb = collision.attachedRigidbody;
+            //Debug.Log("Collided with player");
+            Player playerScript = collision.gameObject.GetComponent<Player>();
+            if (playerScript.vulnerable)
+            {
+                /*
+                if (playerScript.facingRight)
+                {
+                    playerRb.AddForce((Vector2.left + Vector2.up) * 5.0f, ForceMode2D.Impulse);
+                }
+                else
+                {
+                    playerRb.AddForce((Vector2.right + Vector2.up) * 5.0f, ForceMode2D.Impulse);
+                }
+                */
                 //Debug.Log("Player is vulnerable");
                 collision.gameObject.SendMessageUpwards("TakeDamage", damage);
             }

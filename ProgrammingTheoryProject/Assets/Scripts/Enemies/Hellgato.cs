@@ -2,8 +2,10 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+// INHERITANCE
 public class Hellgato : Enemy
 {
+    // POLYMORPHISM
     protected override void Awake()
     {
         base.Awake();
@@ -11,18 +13,19 @@ public class Hellgato : Enemy
         damage = 15.0f;
     }
 
-    // Update is called once per frame
+    // POLYMORPHISM
     protected override void Update()
     {
         base.Update();
     }
 
+    // POLYMORPHISM
     protected override void Move()
     {
-        base.Move();
         rb.velocity = Vector2.left * moveSpeed;
     }
 
+    // POLYMORPHISM
     protected override void OnTriggerEnter2D(Collider2D collision)
     {
         base.OnTriggerEnter2D(collision);

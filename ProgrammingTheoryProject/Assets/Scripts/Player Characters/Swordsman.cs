@@ -2,10 +2,12 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+// INHERITANCE
 public class Swordsman : Player
 {
     [SerializeField] private Sprite attackHitboxSprite;
-
+    
+    // POLYMORPHISM
     protected override void Awake()
     {
         base.Awake();
@@ -13,6 +15,7 @@ public class Swordsman : Player
         hurtState = Animator.StringToHash("Base Layer.SwordsmanHurt");
     }
 
+    // POLYMORPHISM
     protected override void Update()
     {
         base.Update();

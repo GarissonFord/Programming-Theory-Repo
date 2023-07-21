@@ -2,18 +2,17 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+// INHERITANCE
 public class BurningGhoul : Enemy
 {
-
-    // Update is called once per frame
     protected override void Update()
     {
         Move();
     }
 
+    // POLYMORPHISM
     protected override void Move()
     {
-        base.Move();
         rb.velocity = Vector2.left * moveSpeed;
     }
 }

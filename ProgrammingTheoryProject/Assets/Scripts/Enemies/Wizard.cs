@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+// INHERITANCE
 public class Wizard : Enemy
 {
     [SerializeField] private float circleCastRadius;
@@ -11,7 +12,7 @@ public class Wizard : Enemy
     [SerializeField] private Transform fireballSpawn;
      private float timeSinceLastFireballSpawned;
 
-    // Update is called once per frame
+    // POLYMORPHISM
     protected override void Update()
     {
         // Regularly check for the player in sight
@@ -21,6 +22,12 @@ public class Wizard : Enemy
             ConjureFireball();
     }
 
+    protected override void Move()
+    {
+        
+    }
+
+    // POLYMORPHISM
     protected override void OnTriggerEnter2D(Collider2D collision)
     {
         if (collision.CompareTag("Player"))
@@ -29,6 +36,7 @@ public class Wizard : Enemy
         }
     }
 
+    // POLYMORPHISM
     private void OnTriggerExit2D(Collider2D collision)
     {
         if (collision.CompareTag("Player"))

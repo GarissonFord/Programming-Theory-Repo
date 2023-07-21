@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class ActivePlayerManager : MonoBehaviour
 {
@@ -8,6 +9,8 @@ public class ActivePlayerManager : MonoBehaviour
     [SerializeField] private List<GameObject> playerCharacters;
     [SerializeField] private GameObject activePlayer;
     [SerializeField] private int activePlayerIndex;
+    [SerializeField] private Text healthText;
+    [SerializeField] private Player activePlayerScript;
 
     private CameraFollow cameraFollow;
 
@@ -15,6 +18,7 @@ public class ActivePlayerManager : MonoBehaviour
     void Start()
     {
         cameraFollow = FindObjectOfType<CameraFollow>().GetComponent<CameraFollow>();
+        healthText = GameObject.Find("Health Text").GetComponent<Text>();
 
         activePlayerIndex = 0;
         for (int i = 0; i < playerPrefabs.Count; i++)
@@ -24,6 +28,9 @@ public class ActivePlayerManager : MonoBehaviour
             if(i == activePlayerIndex)
             {
                 activePlayer = Instantiate(playerPrefabs[i]);
+                activePlayerScript = activePlayer.GetComponent<Player>();
+                activePlayerScript.health = activePlayerScript.maxHealth;
+                healthText.text = "Health: " + activePlayerScript.health;
             }
         }
     }
@@ -50,14 +57,22 @@ public class ActivePlayerManager : MonoBehaviour
     void AdjustPlayerIndex(int index)
     {
         if (index == -1)
+        {
             activePlayerIndex = playerPrefabs.Count - 1;
+        }
         else if (index == playerPrefabs.Count)
+        {
             activePlayerIndex = 0;
+        }
     }
 
     void SwitchPlayer(int i)
     {
         GameObject newPlayer = Instantiate(playerPrefabs[i], activePlayer.transform.position, activePlayer.transform.rotation);
+        Player newPlayerScript = newPlayer.GetComponent<Player>();
+        newPlayerScript.health = activePlayerScript.health;
+        activePlayerScript = newPlayerScript;
+        healthText.text = "Health: " + activePlayerScript.health;
         Destroy(activePlayer.gameObject);
         activePlayer = newPlayer;
 

@@ -2,10 +2,12 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+// INHERITANCE
 public class Skeleton : Enemy
 {
     int risingState;
 
+    // POLYMORPHISM
     protected override void Awake()
     {
         base.Awake();
@@ -14,20 +16,22 @@ public class Skeleton : Enemy
         damage = 10.0f;
     }
 
+    // POLYMORPHISM
     protected override void Update()
     {
         base.Update();
     }
 
+    // POLYMORPHISM
     protected override void Move()
     {
-        base.Move();
-
         if (currentState == risingState)
             rb.velocity = Vector2.zero;
         else
             rb.velocity = Vector2.left * moveSpeed;
     }
+
+    // POLYMORPHISM
     protected override void OnTriggerEnter2D(Collider2D collision)
     {
         base.OnTriggerEnter2D(collision);

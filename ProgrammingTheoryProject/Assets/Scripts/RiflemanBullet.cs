@@ -4,11 +4,13 @@ using UnityEngine;
 
 public class RiflemanBullet : MonoBehaviour
 {
+    [SerializeField] private float bulletAttackPower;
+
     private void OnCollisionEnter2D(Collision2D collision)
     {
         if (collision.gameObject.CompareTag("Enemy"))
         {
-            collision.gameObject.SendMessageUpwards("Die");
+            collision.gameObject.SendMessageUpwards("TakeDamage", bulletAttackPower);
             Destroy(gameObject);
         }
     }
@@ -17,7 +19,7 @@ public class RiflemanBullet : MonoBehaviour
     {
         if (collision.CompareTag("Enemy"))
         {
-            collision.gameObject.SendMessageUpwards("Die");
+            collision.gameObject.SendMessageUpwards("TakeDamage", bulletAttackPower);
             Destroy(gameObject);
         }
     }

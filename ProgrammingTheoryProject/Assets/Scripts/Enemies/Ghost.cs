@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+// INHERITANCE
 public class Ghost : Enemy
 {
     private Vector3 position;
@@ -9,6 +10,7 @@ public class Ghost : Enemy
     [SerializeField] private float amplitude;
     [SerializeField] private float magnitude;
 
+    // POLYMORPHISM
     protected override void Awake()
     {
         base.Awake();
@@ -16,12 +18,13 @@ public class Ghost : Enemy
         position = transform.position;
     }
 
-    // Update is called once per frame
+    // POLYMORPHISM
     protected override void Update()
     {
         base.Update();
     }
 
+    // POLYMORPHISM
     protected override void Move()
     {
         // Moves the transform's horizontal position
