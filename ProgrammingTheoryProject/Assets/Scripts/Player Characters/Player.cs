@@ -51,6 +51,7 @@ public abstract class Player : MonoBehaviour
     // Movement fields
     [SerializeField] protected float moveSpeed;
     [SerializeField] protected float maxSpeed;
+    [SerializeField] protected float minimumInputThreshold;
     [SerializeField] protected float jumpForce;
     [SerializeField] public float horizontal;
     [SerializeField] public float vertical;
@@ -85,11 +86,8 @@ public abstract class Player : MonoBehaviour
         playerAudioSource = GetComponent<AudioSource>();
     }
 
-    protected virtual void Update()
+    protected virtual void FixedUpdate()
     {
-        horizontal = Input.GetAxis("Horizontal");
-        vertical = Input.GetAxisRaw("Vertical");
-
         // Do not want the player manipulating their move direction during the hurt animation
         if (horizontal != 0.0f && hurt != true)
         {
@@ -100,6 +98,12 @@ public abstract class Player : MonoBehaviour
         {
             animator.SetBool("IsMoving", false);
         }
+    }
+
+    protected virtual void Update()
+    {
+        horizontal = Input.GetAxis("Horizontal");
+        vertical = Input.GetAxisRaw("Vertical");
 
         GroundCheck();
 
@@ -183,9 +187,11 @@ public abstract class Player : MonoBehaviour
 
     protected virtual void Move()
     {
-        if (!hurt)
+        Debug.Log("Current x velocity: " + rb.velocity.x);
+        float xVelocity = Mathf.Abs(rb.velocity.x);
+        if (!hurt && xVelocity < maxSpeed)
         {
-            rb.velocity = new Vector2(horizontal * moveSpeed, rb.velocity.y);
+            rb.velocity += new Vector2(horizontal * moveSpeed, 0.0f);
         }
     }
 
@@ -223,7 +229,6 @@ public abstract class Player : MonoBehaviour
     public virtual void TakeDamage(int damageTaken)
     {
         hurt = true;
-        canFlip = false;
         health -= damageTaken;
         healthText.text = "Health: " + health;
 
@@ -248,11 +253,10 @@ public abstract class Player : MonoBehaviour
     private void Knockback()
     {
         rb.AddForce(-rb.velocity, ForceMode2D.Impulse);
+        //Debug.Log("x velocity after initial force: " + rb.velocity.x);
 
         Vector2 knockbackVector;
         
-        Vector2 xVelocity = new Vector2(rb.velocity.x, 0.0f); 
-
         if (facingRight)
         {
             knockbackVector = (Vector2.left + Vector2.up) * knockbackForce;
@@ -262,9 +266,8 @@ public abstract class Player : MonoBehaviour
             knockbackVector = (Vector2.right + Vector2.up) * knockbackForce;
         }
         
-        Debug.Log("knockbackVector: " + knockbackVector);
-        //rb.AddForce(knockbackVector, ForceMode2D.Impulse);
-        rb.AddRelativeForce(knockbackVector, ForceMode2D.Impulse);
+        //Debug.Log("knockbackVector: " + knockbackVector);
+        rb.AddForce(knockbackVector, ForceMode2D.Impulse);
     }
 
     private IEnumerator DamageFlash()

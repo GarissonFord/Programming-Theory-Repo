@@ -178,9 +178,12 @@ MonoBehaviour:
   playerDeathAudio: {fileID: 8300000, guid: eef75744e59a8234ab5aa167876603ae, type: 3}
   m_Health: 0
   healthText: {fileID: 0}
-  moveSpeed: 5
+  moveSpeed: 1
   maxSpeed: 5
   jumpForce: 7
+  horizontal: 0
+  vertical: 0
+  canMove: 0
   groundCheck: {fileID: 1275626974851993626}
   grounded: 0
   facingRight: 1
