@@ -5,22 +5,20 @@ using UnityEngine.UI;
 
 public class Healthbar : MonoBehaviour
 {
-    [SerializeField] private Text scoreText;
+    public Image currentHealthBar;
+
+    [SerializeField] ActivePlayerManager activePlayerManager;
 
     // Start is called before the first frame update
     void Start()
     {
-        
+        currentHealthBar = GetComponent<Image>();
     }
 
-    // Update is called once per frame
-    void Update()
+    public void UpdateHealthbar(float health, float maxHealth)
     {
-        
-    }
-
-    public void UpdateHealthbar(int health)
-    {
-        scoreText.text = health.ToString();
+        float ratio = health / maxHealth;
+        Debug.Log("Ratio after taking damage: " + ratio);
+        currentHealthBar.rectTransform.localScale = new Vector3(ratio, 1, 1);
     }
 }

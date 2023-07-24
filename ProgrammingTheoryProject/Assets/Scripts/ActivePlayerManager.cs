@@ -7,9 +7,10 @@ public class ActivePlayerManager : MonoBehaviour
 {
     [SerializeField] private List<GameObject> playerPrefabs;
     [SerializeField] private List<GameObject> playerCharacters;
-    [SerializeField] private GameObject activePlayer;
+    [SerializeField] public GameObject activePlayer;
     [SerializeField] private int activePlayerIndex;
     [SerializeField] private Text healthText;
+    [SerializeField] public Healthbar healthBar;
     [SerializeField] private Player activePlayerScript;
 
     private CameraFollow cameraFollow;
@@ -18,7 +19,7 @@ public class ActivePlayerManager : MonoBehaviour
     void Start()
     {
         cameraFollow = FindObjectOfType<CameraFollow>().GetComponent<CameraFollow>();
-        healthText = GameObject.Find("Health Text").GetComponent<Text>();
+        //healthBar = GameObject.Find("Health Text").GetComponent<Healthbar>();
 
         activePlayerIndex = 0;
         for (int i = 0; i < playerPrefabs.Count; i++)
@@ -30,7 +31,8 @@ public class ActivePlayerManager : MonoBehaviour
                 activePlayer = Instantiate(playerPrefabs[i]);
                 activePlayerScript = activePlayer.GetComponent<Player>();
                 activePlayerScript.health = activePlayerScript.maxHealth;
-                healthText.text = "Health: " + activePlayerScript.health;
+                healthBar.UpdateHealthbar(activePlayerScript.health, activePlayerScript.maxHealth);
+                //healthText.text = "Health: " + activePlayerScript.health;
             }
         }
     }
@@ -72,7 +74,8 @@ public class ActivePlayerManager : MonoBehaviour
         Player newPlayerScript = newPlayer.GetComponent<Player>();
         newPlayerScript.health = activePlayerScript.health;
         activePlayerScript = newPlayerScript;
-        healthText.text = "Health: " + activePlayerScript.health;
+        //healthText.text = "Health: " + activePlayerScript.health;
+        healthBar.UpdateHealthbar(activePlayerScript.health, activePlayerScript.maxHealth);
         Destroy(activePlayer.gameObject);
         activePlayer = newPlayer;
 

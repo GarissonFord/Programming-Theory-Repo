@@ -21,8 +21,8 @@ public abstract class Player : MonoBehaviour
     // Current health of player
     // ENCAPSULATION
     [SerializeField] 
-    private int m_Health = 100;
-    public int health {
+    private float m_Health = 100.0f;
+    public float health {
         get { return m_Health; } 
         set
         {
@@ -34,6 +34,8 @@ public abstract class Player : MonoBehaviour
             }
         }
     }
+    
+    public Healthbar healthBar;
 
     //protected Healthbar healthbar;
     [SerializeField] private Text healthText;
@@ -82,6 +84,8 @@ public abstract class Player : MonoBehaviour
         animator = GetComponent<Animator>();
         healthText = GameObject.Find("Health Text").GetComponent<Text>();
         healthText.text = "Health: " + health;
+        healthBar = GameObject.Find("Green Health Bar").GetComponent<Healthbar>();
+        healthBar.UpdateHealthbar(health, maxHealth);
         gameManager = GameObject.Find("GameManager").GetComponent<GameManager>();
         playerAudioSource = GetComponent<AudioSource>();
     }
@@ -187,7 +191,7 @@ public abstract class Player : MonoBehaviour
 
     protected virtual void Move()
     {
-        Debug.Log("Current x velocity: " + rb.velocity.x);
+        //Debug.Log("Current x velocity: " + rb.velocity.x);
         float xVelocity = Mathf.Abs(rb.velocity.x);
         if (!hurt && xVelocity < maxSpeed)
         {
@@ -226,11 +230,12 @@ public abstract class Player : MonoBehaviour
         transform.localScale = theScale;
     }
 
-    public virtual void TakeDamage(int damageTaken)
+    public virtual void TakeDamage(float damageTaken)
     {
         hurt = true;
         health -= damageTaken;
         healthText.text = "Health: " + health;
+        healthBar.UpdateHealthbar(health, maxHealth);
 
         if (health <= 0.0f)
         {

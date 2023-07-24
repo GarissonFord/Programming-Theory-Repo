@@ -5124,10 +5124,12 @@ MonoBehaviour:
   playerHurtAudio: {fileID: 8300000, guid: 898458c13e21d3242b64222afafcf03f, type: 3}
   playerDeathAudio: {fileID: 8300000, guid: eef75744e59a8234ab5aa167876603ae, type: 3}
   m_Health: 0
+  healthBar: {fileID: 0}
   healthText: {fileID: 0}
   moveSpeed: 1
   maxSpeed: 5
-  jumpForce: 7
+  minimumInputThreshold: 0
+  jumpForce: 8
   horizontal: 0
   vertical: 0
   canMove: 0
